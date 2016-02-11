@@ -1,6 +1,6 @@
-=================
-Table of Contents
-=================
+==========================================
+Building Branded Clients Table of Contents
+==========================================
 
 .. toctree::
     :maxdepth: 3

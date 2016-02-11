@@ -192,7 +192,7 @@ u'Building Branded Mobile Apps (Enterprise Only)', u'The ownCloud developers',
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = 'shared_assets/static/logo-blue.pdf'
+latex_logo = '_shared_assets/static/logo-blue.pdf'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
