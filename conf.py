@@ -29,7 +29,7 @@ extensions = ['sphinxcontrib.phpdomain', 'sphinx.ext.todo', 'rst2pdf.pdfbuilder'
 
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['../_shared_assets/templates']
+templates_path = ['_shared_assets/templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -96,7 +96,7 @@ pygments_style = 'sphinx'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['../_shared_assets/themes']
+html_theme_path = ['_shared_assets/themes']
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -123,7 +123,7 @@ html_short_title = "Building Branded Mobile Apps"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['../_shared_assets/static']
+html_static_path = ['_shared_assets/static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -192,7 +192,7 @@ u'Building Branded Mobile Apps (Enterprise Only)', u'The ownCloud developers',
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = '../_shared_assets/static/logo-blue.pdf'
+latex_logo = 'shared_assets/static/logo-blue.pdf'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.

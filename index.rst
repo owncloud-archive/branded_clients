@@ -7,4 +7,5 @@ Table of Contents
      
     branded_android_app/index
     branded_ios_app/index
+    branded_desktop_client/index.rst
     
