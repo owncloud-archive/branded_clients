@@ -69,7 +69,9 @@ on the app. The default is 30.
 
 The next section is for uploading your custom artwork to be built 
 into the app. The ownBuilder app tells you exactly which images you need, and 
-their required size. Click the example images on the right to enlarge them.
+their required size. You only need one Splash Screen image, and ownBrander 
+will automatically resize and crop it for different-sized screens. Click the 
+example images on the right to enlarge them.
 
 .. figure:: images/ownbrander-14.png
    
@@ -107,9 +109,8 @@ to display.
 
 .. figure:: images/ownbrander-30.png
 
-By default, sharing by public URL is enabled. Public share links allow your 
-users to share files with anyone. This option allows you to disable public link 
-sharing.
+By default, both internal sharing and sharing by link are enabled. You have the 
+options to disable one or both of these. 
 
 .. figure:: images/ownbrander-31.png
 
@@ -122,6 +123,16 @@ advantage of `Background Execution.
 iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html>`_
 
 .. figure:: images/ownbrander-32.png
+
+ownBrander auto-generates a version number for you. You have the option to 
+customize your version number. Once you do this, you will have to update it 
+manually in new releases. You may also modify the build number, which defaults 
+to 1.0. This must also be manually updated. The version number must exactly 
+match the version number you enter in iTunes. Your build number is used by 
+iTunes to uniquely identify your app. When the build number changes, iTunes 
+automatically syncs the updates for your users.
+
+.. figure:: images/ownbrander-33.png
 
 That completes the required elements of your branded iOS app.
 
