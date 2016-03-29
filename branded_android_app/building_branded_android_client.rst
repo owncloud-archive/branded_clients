@@ -2,6 +2,9 @@
 Building Your App With ownBrander
 =================================
 
+.. note:: See the 
+   `FAQ for additional information <https://github.com/owncloud/ownbrander/wiki/FAQ-%28Customers%29>`_
+
 Building an Android app requires just a few images, and the wizard tells you 
 their required dimensions. They must be the exact specified dimensions, 
 preferably in PNG format.
