@@ -3,7 +3,7 @@ Building and Distributing Your Branded iOS App
 ==============================================
 
 .. note:: See the 
-   `FAQ for additional information <https://github.com/owncloud/ownbrander/wiki/FAQ-%28Customers%29>`_
+   `FAQ for additional information <https://github.com/owncloud/branded_clients/wiki/Branded-ownCloud-Clients-FAQ>`_
    such as logging into multiple servers, error messages, cryptography export exemptions, 
    and issues with publishing on iTunes.
 
