@@ -45,3 +45,32 @@ Does this app use the Advertising Identifier (IDFA)?
 ----------------------------------------------------
 
 No, no ads at all
+
+
+Does your app access any paid content or services?
+----------------------------------------------------
+
+
+What are the paid content or services, and what are the costs?
+--------------------------------------------------------------
+
+
+Who pays for the content or services?
+-------------------------------------
+
+
+
+Where do they pay, and what's the payment method?
+-------------------------------------------------
+
+
+
+If users create an account to use your app, are there fees involved?
+--------------------------------------------------------------------
+
+
+
+How do users obtain an account?
+-------------------------------
+
+
