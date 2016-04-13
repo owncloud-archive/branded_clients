@@ -1,6 +1,8 @@
 {%- if pagename != "search" %}
-<form class="navbar-search pull-right" style="margin-bottom:-3px;" action="{{ pathto('search') }}" method="get">
-  <input type="text" name="q" placeholder="Search" />
+<form action="{{ pathto('search') }}" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
   <input type="hidden" name="check_keywords" value="yes" />
   <input type="hidden" name="area" value="default" />
 </form>

@@ -165,9 +165,11 @@ review". In a few days, or perhaps many days, your app will either be approved
 or rejected. If it is rejected Apple will tell you what you need to do to get 
 it approved.
 
-Here are the most common answers to questions from the iOS App Review Team:
+FAQ
+---
 
-`faq-ios-app-review-team.rst <https://github.com/owncloud/branded_clients/blob/master/branded_ios_app/faq-ios-app-review-team.rst>`_
+:doc:`Here are the most common answers <faq_ios_app_review_team>` to questions 
+from the iOS App Review Team.
 
 .. figure:: images/ios-publish-15.png
 
