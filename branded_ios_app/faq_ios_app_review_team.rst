@@ -21,8 +21,19 @@ that those apps that act as Document Picker may access to the ownCloud
 data, edit it and then changes are automatically uploaded back to the
 ownCloud server.
 
-Please revise your app to provide audible content to the user while the app is in the background or remove the “audio” setting from the UIBackgroundModes key.
---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Background Audio
+----------------
+
+**Questions:**
+
+- Please revise your app to provide audible content to the user while
+  the app is in the background or remove the “audio” setting from the
+  UIBackgroundModes key.
+- What is the purpose of declaring Audio background mode? Please explain
+  the need for this background mode and where the usage can be found in
+  your binary.
+
+**Answer:**
 
 Sometimes, usually, the first time the ownCloud app is submitted, it
 is rejected because it is included the background mode, Apple
