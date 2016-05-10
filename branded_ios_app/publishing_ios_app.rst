@@ -39,7 +39,7 @@ Procedure
   
 You need the Apple tools to build eight provisioning profiles (4 Ad Hoc and 4 
 App Store) and a P12 certificate. You will email the four Ad Hoc profiles and 
-P12 certificate to branding@owncloud.com after building your app with the 
+P12 certificate to support@owncloud.com after building your app with the 
 ownBrander app on `Customer.owncloud.com 
 <https://customer.owncloud.com/owncloud>`_. You must create the provisioning 
 profiles and P12 certificate first, before building your app, because you must 

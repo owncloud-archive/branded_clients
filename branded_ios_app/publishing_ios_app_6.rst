@@ -3,7 +3,7 @@ Creating a P12 Certificate
 ==========================
 
 In addition to emailing your four Ad Hoc provisioning profiles to 
-branding@owncloud.com, you must also include your P12 certificate. To create 
+support@owncloud.com, you must also include your P12 certificate. To create 
 this, return to Keychain Access on your Mac computer and find your private key 
 that you created at the beginning (see 
 :doc:`publishing_ios_app_2`). 
@@ -21,7 +21,7 @@ Enter any name you want, the location you want to save it to, and click
    
 In the next screen you have the option to enter a password. If you put a 
 password on your P12 certificate you will have to include it when you send your 
-certificate and provisioning profiles to branding@owncloud.com. Click **OK**.
+certificate and provisioning profiles to support@owncloud.com. Click **OK**.
 
 .. figure:: images/ios-p12-4.png
 

@@ -22,7 +22,7 @@ sections contains all of the required elements that you must configure.
 Suggested and Advanced allow additional customizations.
 
 When you have completed and submitted your app, email your three provisioning 
-profiles and P12 certificate to branding@owncloud.com.
+profiles and P12 certificate to support@owncloud.com.
 
 Required Section
 ----------------
@@ -183,7 +183,7 @@ Generate iOS App
 When you have uploaded all of your images and completed your customizations, 
 click the **Generate iOS App** button and take a well-deserved break. Remember 
 to email your four Ad Hoc provisioning profiles and P12 certificate to 
-branding@owncloud.com.
+support@owncloud.com.
 
 .. figure:: images/ownbrander-28.png
    :alt: Generate iOS App button.
