@@ -26,12 +26,16 @@ Background Audio
 
 **Questions:**
 
-- Please revise your app to provide audible content to the user while
-  the app is in the background or remove the “audio” setting from the
-  UIBackgroundModes key.
 - What is the purpose of declaring Audio background mode? Please explain
   the need for this background mode and where the usage can be found in
   your binary.
+- Your app declares support for audio in the UIBackgroundModes key in
+  your Info.plist but did not include features that require persistent
+  audio. The audio key is intended for use by applications that provide
+  audible content to the user while in the background, such as music
+  player or streaming audio applications. Please revise your app to provide
+  audible content to the user while the app is in the background or remove
+  the "audio" setting from the UIBackgroundModes key.
 
 **Answer:**
 
