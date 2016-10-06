@@ -101,6 +101,21 @@ required image specifications.
 
 .. figure:: images/ios-publish-9.png
 
+Apple simplified the screenshot submission process: 
+https://developer.apple.com/news/?id=08082016a 
+
+Please check this Video (in Safari) for details: 
+https://developer.apple.com/videos/play/wwdc2016/305/?time=1700 
+
+
+
+For the ownCloud client, we also don't use "real" screenshots, we use frames in different sizes instead: 
+https://itunes.apple.com/app/owncloud/id543672169 
+
+You can find templates to generate those assets. Here are examples for the Sketch app: 
+https://github.com/LaunchKit/SketchToAppStore 
+https://github.com/MengTo/AppStoreSketch 
+
    *figure 9*
    
 Then you must enter your app name, a description, some keywords for iTunes 
