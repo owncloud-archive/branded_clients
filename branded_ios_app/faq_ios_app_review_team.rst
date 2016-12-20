@@ -61,6 +61,23 @@ Does this app use the Advertising Identifier (IDFA)?
 
 No, no ads at all
 
+
+IPv6 Connectivity
+-----------------
+
+**Question:**
+
+    We discovered one or more bugs in your app when reviewed on the iPad and the iPhone
+    running iOS 10.2 on Wi-Fi connected to an IPv6 network - Specifically, the app does
+    not connect to the server.
+
+**Information from Apple:**
+https://developer.apple.com/library/content/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/UnderstandingandPreparingfortheIPv6Transition/UnderstandingandPreparingfortheIPv6Transition.html
+
+Here you can check your server for IPv6 connectivity:
+http://ipv6-test.com/validate.php
+
+
 Business questions from Apple
 -----------------------------
 
