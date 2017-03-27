@@ -2,6 +2,40 @@
 Updating Your Branded Desktop Clients
 =====================================
 
+Branded desktop clients can use the same auto update feature as the regular
+ownCloud client. (Preventing Automatic Updates ==> https://doc.owncloud.com/desktop/latest/autoupdate.html#preventing-automatic-updates)
+
+Using updates.owncloud.com
+--------------------------
+
+The easy way is, to notify your ownCloud support about the location where
+you uploaded your new generated branded client binaries.
+
+You need to perform the following steps:
+
+#. Generate branded clients.
+#. Upload branded clients to your Web server.
+
+   -  Windows example:
+       https://mycloud.example.com/install/mycloud-2.1.1.240-setup.exe
+   
+   -  Mac OS X examples:
+       https://mycloud.example.com/install/mycloud-2.1.1.787.pkg
+       
+       https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz
+       
+       https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz.sig
+   
+   -  You should have a Web page with links to your branded clients, so your 
+      users can find and download them. For example, 
+      https://mycloud.example.com/install/ with
+      ``Options +Indexes`` in your ownCloud ``.htaccess`` file.
+
+Please send all the URL's to ownCloud support.
+
+Hosting Client Updater Server on own infrastructure
+---------------------------------------------------
+
 The Client Updater Server provides a Web service that will tell an ownCloud 
 desktop sync client whether or not an update is available. If an update is 
 available, it will also provide metadata for the update, such as the Download 
@@ -22,10 +56,10 @@ There are times when you may want to disable update notifications. See the
 examples below to learn how to do this.
 
 Prerequisites
--------------
+~~~~~~~~~~~~~
 
 #. Configure "Update URL" in the "Desktop" section of your ownBrander
-   account (available for "advanced" users only).
+   account (available with "advanced branding subscription" only).
 
    -  Example:
        https://mycloud.example.com/updates/
@@ -50,7 +84,7 @@ Prerequisites
       ``Options +Indexes`` in your ownCloud ``.htaccess`` file.
 
 Install client-updater-server
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Download ``client-updater-server-0.3.tar.xz`` from
    https://customer.owncloud.com/.
@@ -64,7 +98,7 @@ Install client-updater-server
        ``config/mycloud.php``
 
 Configure client-updater-server
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All configuration is done in your ``config/mycloud.php``::
 
@@ -99,7 +133,7 @@ All configuration is done in your ``config/mycloud.php``::
     ];
 
 Disabling Notifications
-^^^^^^^^^^^^^^^^^^^^^^^
+```````````````````````
 
 There may be times when you wish to disable update notifications. To do this, 
 make the ``'currentVersion'`` and ``'currentVersionString'`` older than the 
@@ -108,7 +142,7 @@ release versions that are newer than the currently installed clients.
     
     
 Windows
-^^^^^^^
+```````
 
 -  ``'currentVersion'``
    Exact version of the new client, including the build nr
@@ -122,7 +156,7 @@ Windows
 
 
 Mac OS X
-^^^^^^^^
+````````
 
 -  ``currentVersion'``
    Exact version of the new client, including the build number.
@@ -141,7 +175,7 @@ Mac OS X
    https://owncloud.org/install/#install-clients.
    
 Linux
-^^^^^
+`````
 
 -  ``'currentVersion'``
    Exact version of the new client, including the build nr
@@ -153,10 +187,10 @@ Linux
    manually install new client versions.   
 
 Debugging client-updater-server
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Windows
-^^^^^^^
+```````
 
 This a example URL of a 2.1.1 client for Mac OS X:
 https://mycloud.example.com/updates/?version=2.1.1.140&platform=win32&oem=
@@ -181,7 +215,7 @@ The output should look like this if you call the URL manually::
     </owncloudclient>
 
 Mac OS X
-^^^^^^^^
+````````
 
 This a example URL of a 2.1.1 client for Mac OS X::
 
