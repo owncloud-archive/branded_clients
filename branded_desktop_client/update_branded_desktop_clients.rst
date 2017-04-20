@@ -2,39 +2,35 @@
 Updating Your Branded Desktop Clients
 =====================================
 
-Branded desktop clients can use the same auto update feature as the regular
-ownCloud client. (Preventing Automatic Updates ==> https://doc.owncloud.com/desktop/latest/autoupdate.html#preventing-automatic-updates)
+Branded desktop clients can use the same `auto-update feature`_ as the regular ownCloud client. 
 
-Using updates.owncloud.com
---------------------------
+1. `Use updates.owncloud.com`_
+2. `Host the client update server on your own infrastructure`_
 
-The easy way is, to notify your ownCloud support about the location where
-you uploaded your new generated branded client binaries.
+Use updates.owncloud.com
+------------------------
 
-You need to perform the following steps:
+To use updates.owncloud.com, you need to perform the following, two, steps:
 
-#. Generate branded clients.
-#. Upload branded clients to your Web server.
+1. `Generate branded clients`_.
+2. Upload the branded clients to your web server.
 
-   -  Windows example:
-       https://mycloud.example.com/install/mycloud-2.1.1.240-setup.exe
-   
-   -  Mac OS X examples:
-       https://mycloud.example.com/install/mycloud-2.1.1.787.pkg
-       
-       https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz
-       
-       https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz.sig
-   
-   -  You should have a Web page with links to your branded clients, so your 
-      users can find and download them. For example, 
-      https://mycloud.example.com/install/ with
-      ``Options +Indexes`` in your ownCloud ``.htaccess`` file.
+The ownCloud support team needs a binary for Windows, and three for macOS.
+After you've done so, they might be uploaded to your server as:
 
-Please send all the URL's to ownCloud support.
+- https://mycloud.example.com/install/mycloud-2.1.1.240-setup.exe
+- https://mycloud.example.com/install/mycloud-2.1.1.787.pkg
+- https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz
+- https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz.sig
 
-Hosting Client Updater Server on own infrastructure
----------------------------------------------------
+Next, notify ownCloud support about the location where you uploaded your newly generated and branded client binaries.
+You should also provide a Web page with links to your branded clients, so your users can find and download them as well. 
+For example: 
+
+https://mycloud.example.com/install/ with ``Options +Indexes`` in your ownCloud ``.htaccess`` file or Apache server configuration.
+
+Host the client update server on your own infrastructure
+--------------------------------------------------------
 
 The Client Updater Server provides a Web service that will tell an ownCloud 
 desktop sync client whether or not an update is available. If an update is 
@@ -250,3 +246,8 @@ The output should look like this if you call the URL manually::
     </item>
     </channel>
    </rss> 
+   
+.. links
+   
+.. _auto-update feature: https://doc.owncloud.com/desktop/latest/autoupdate.html#preventing-automatic-updates
+.. _Generate branded clients: https://doc.owncloud.com/branded_clients/
