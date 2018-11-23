@@ -1,3 +1,0 @@
-* Building Branded Android Apps
-** xref:building_branded_android_client.adoc[Building Your App With ownBrander]
-** xref:publishing_android_app.adoc[Distributing Your Branded Android App]
