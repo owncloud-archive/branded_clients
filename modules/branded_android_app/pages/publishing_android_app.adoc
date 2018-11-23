@@ -60,11 +60,11 @@ Mac OS X and Windows users can download the Oracle JDK from http://www.oracle.co
 
 `zipalign` is included in the https://developer.android.com/sdk/index.html[Android Software Development Kit]. It is a large download, but once you have downloaded it you can copy the `zipalign` binary to any computer and use it. Go to https://developer.android.com/sdk/index.html[Android Software Development Kit] and click the ``Download Android Studio'' button.
 
-image:images/android_custom_17.png[image]
+image:android_custom_17.png[image]
 
 Download the appropriate *SDK Tools Only* package for your operating system.
 
-image:images/android_custom_18.png[image]
+image:android_custom_18.png[image]
 
 Unpack it and change to the unpacked directory, which is `android-sdk-linux` on Linux systems, `android-sdk-macosx` on Mac systems, and `android-sdk-windows` on Windows systems. There is one more step, and that is to install additional tools. Run this command from the unpacked directory:
 
@@ -177,15 +177,15 @@ Again, this emits a lot of output, and when you see *Verification succesful* at 
 
 You can download your branded Android app from your account on https://customer.owncloud.com/owncloud[Customer.owncloud.com], and send it as an email attachment to your users. (This is not the optimal way to distribute it as it is over 2 megabytes in size.) When they open your email on their Android phone or tablet, they must first click the the download arrow (bottom right of the screenshot) to download your app.
 
-image:images/android_custom_1.png[image]
+image:android_custom_1.png[image]
 
 When the arrow changes to a green checkbox, it has been downloaded.
 
-image:images/android_custom_2.png[image]
+image:android_custom_2.png[image]
 
 Now your user must click on the green checkbox, and this launches the app installer, and all they have to do is follow the installation wizard to install your branded app.
 
-image:images/android_custom_3.png[image]
+image:android_custom_3.png[image]
 
 When the installation is complete, the https://doc.owncloud.com/android/[ownCloud Android App Manual] contains instructions for using the app.
 
@@ -212,31 +212,31 @@ Start at Google’s http://developer.android.com/distribute/googleplay/start.htm
 
 Google’s process for uploading apps is fairly streamlined, and the most time-consuming task is creating all the required graphics. After registering, you’ll see the welcome screen for the Google Dev Console. Click *Publish an Android app on Google Play*.
 
-image:images/android_custom_6.png[image]
+image:android_custom_6.png[image]
 
 This opens the *Add New Application* screen. Click the *Prepare Store Listing* button. (Note that as you navigate the various screens, you can click the Save Draft button to preserve your changes.)
 
-image:images/android_custom_7.png[image]
+image:android_custom_7.png[image]
 
 On the next screen, enter your product description.
 
-image:images/android_custom_8.png[image]
+image:android_custom_8.png[image]
 
 Then you’ll have to upload a batch of graphics in various sizes for the *Graphic Assets* section, like these images for a smartphone and seven-inch tablet. You are required to upload at least two images.
 
-image:images/android_custom_9.png[image]
+image:android_custom_9.png[image]
 
 You must also upload a 512x512-pixel logo, and a 1024x500 banner.
 
-image:images/android_custom_10.png[image]
+image:android_custom_10.png[image]
 
 Now choose the store categories for your app.
 
-image:images/android_custom_11.png[image]
+image:android_custom_11.png[image]
 
 Then enter your contact information, which will be visible on your store listing.
 
-image:images/android_custom_12.png[image]
+image:android_custom_12.png[image]
 
 On the next line you may optionally link to your privacy policy. It is recommended to have a privacy policy.
 
@@ -244,7 +244,7 @@ When you’re finished with the *Store Listing* page, go to the *Pricing and Dis
 
 For now let’s make this a free app, so click the Free button and select the countries you want to distribute it in.
 
-image:images/android_custom_13.png[image]
+image:android_custom_13.png[image]
 
 Now you may upload your app.
 
@@ -253,35 +253,35 @@ Now you may upload your app.
 
 Now you can upload your app to your Google Play Store page. Go to the *APK* page and click *Upload your first APK to Production*. You don’t need a license key for a free app.
 
-image:images/android_custom_14.png[image]
+image:android_custom_14.png[image]
 
 Drag-and-drop, or browse to select your app.
 
-image:images/android_custom_15.png[image]
+image:android_custom_15.png[image]
 
 A successful upload looks like this:
 
-image:images/android_custom_20.png[image]
+image:android_custom_20.png[image]
 
 Your app is not yet published, but only uploaded to your account. There is one more step to take before you can publish, and that is to go back to the *Pricing & Distribution* page and fill out the *Consent* section.
 
-image:images/android_custom_21.png[image]
+image:android_custom_21.png[image]
 
 Click the Save Draft button, and if you followed all the required steps you should now see a *Publish App* button.
 
-image:images/android_custom_22.png[image]
+image:android_custom_22.png[image]
 
 It will not be published immediately, but after review by Google, which usually takes just a few hours.
 
-image:images/android_custom_23.png[image]
+image:android_custom_23.png[image]
 
 After it has been published, your store listing is updated as PUBLISHED, and it includes a link to your Play Store listing.
 
-image:images/android_custom_24.png[image]
+image:android_custom_24.png[image]
 
 Now all you need to do is distribute the URL to your users, and they can install it either from their Web browsers, or from their Google Play Store apps. This is how it looks to your users.
 
-image:images/android_custom_25.png[image]
+image:android_custom_25.png[image]
 
 [[customize-download-link]]
 == Customize Download Link
@@ -320,7 +320,7 @@ If you would rather not give your branded app away you can sell it on Google Pla
 
 You must establish a Google Wallet Merchant Account. On your Google Dev Console click the *Learn more* link under the Free/Paid button for a nice thorough review of the process and tools. It requires verifying your business information and bank account, and you should expect it to take 3-4 days.
 
-image:images/android_custom_26.png[image]
+image:android_custom_26.png[image]
 
 When you’re ready to set it up, click the *Set up a merchant account now* link under the Free/Paid button.
 

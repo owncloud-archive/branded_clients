@@ -8,15 +8,15 @@ Building an Android app requires just a few images, and the wizard tells you the
 
 First, start on the Common tab and enter your application name and the URL to your ownCloud server. For testing purposes these can be anything. These are your global defaults, and you can change them when you create your apps. When you create production apps, then you must use your real app name, and the URL must point to your real ownCloud server.
 
-image:images/ownbrander-5.png[image]
+image:ownbrander-5.png[image]
 
 Next, go to the Android tab. This has three sections: *Required*, *Suggested*, and *Advanced*. Start in the *Required* section with your application name and server URL, which should be already entered from the Common tab. You may change these, and optionally check *Server URL visible* to allow users to change it.
 
-image:images/ownbrander-29.png[image]
+image:ownbrander-29.png[image]
 
 Now enter your Android package name. This is the unique name that identifies it to Google Play. Then enter your account type; this identifies it on your users’ Android devices.
 
-image:images/ownbrander-6.png[image]
+image:ownbrander-6.png[image]
 
 Your next three options are *Show multiaccount or disconnect*, *Enable send to other apps features*, and *Enable SAML*. When you enable *Show multiaccount or disconnect*, your users can configure multiple ownCloud accounts. When it is disabled they see only a disconnect button.
 
@@ -26,11 +26,11 @@ Your next three options are *Show multiaccount or disconnect*, *Enable send to o
 
 Next, upload your images. The wizard tells you the exact size they must be, and you can click the images on the right to see some example screenshots.
 
-image:images/ownbrander-7.png[image]
+image:ownbrander-7.png[image]
 
 You may enter a custom user agent, if you wish, and display a new account link button to your users. You need this to enable multiaccounts.
 
-image:images/ownbrander-8.png[image]
+image:ownbrander-8.png[image]
 
 [[signing-android-client]]
 == Signing Android Client
@@ -53,10 +53,10 @@ Enter any custom download link in *URL to download the app*.
 
 Finally, if you are creating a paid app then check the checkbox for *Paid Users* and upload an icon.
 
-image:images/ownbrander-11.png[image]
+image:ownbrander-11.png[image]
 
 The *Suggested* and *Advanced* sections allow you to further customize your branding with custom colors and images.
 
 When you are finished click the *Generate Android App* button, and you will either see a success message, or an error message telling you what you need to fix. Note also that at the bottom of the wizard, the name and version of your new app is displayed, for example *The version that it will be generated is: oc-android-2.0.0_signed*. When all of your options are entered correctly and you click the Generate Android App button, it takes up to 48 hours for your app to appear in your https://customer.owncloud.com/owncloud/[Customer.owncloud.com] account.
 
-image:images/ownbrander-12.png[image]
+image:ownbrander-12.png[image]
