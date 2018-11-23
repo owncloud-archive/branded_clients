@@ -53,7 +53,7 @@ check-xrefs:
 	@echo "Checking for invalid Xrefs in all source files"
 	@echo
 	antora generate \
-		--generator=./generator/xref-validator \
+		--generator=./generator/xref-validator.js \
 		--pull \
 		--stacktrace \
 		--ui-bundle-url $(UI_BUNDLE) \
