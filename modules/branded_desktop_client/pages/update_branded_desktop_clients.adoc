@@ -1,6 +1,5 @@
 = Updating Your Branded Desktop Clients
 
-:toc:
 
 The Client Updater Server provides a Web service that will tell an ownCloud desktop sync client whether or not an update is available. If an update is available, it will also provide metadata for the update, such as the Download URL, signatures or a fallback URL that the client can resort to in case the update goes wrong.
 

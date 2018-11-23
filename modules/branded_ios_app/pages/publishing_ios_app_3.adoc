@@ -1,6 +1,5 @@
 = Create Bundle IDs
 
-:toc:
 
 The next step is to create four *Bundle IDs*. These are unique identifiers for your branded iOS app. You must also create an *App Group* and place your three *Bundle IDs* in your *App Group*. You will need your base *Bundle ID* and *App Group* when you build your app with the ownBrander app on https://customer.owncloud.com/owncloud[Customer.owncloud.com].
 

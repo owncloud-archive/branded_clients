@@ -1,7 +1,5 @@
 = Distributing Your Branded Android App
 
-:toc:
-
 Now that you have created your branded Android app with ownCloud’s ownBuilder service (building_branded_android_client) how do you distribute it to your users? There are multiple ways: email, publish_server, or publish_google_play. However you distribute it, the first step is to digitally sign your new app. Signing your app verifies authorship and authenticity.
 
 When you create your branded Android app we supply you with two `.apk` files: one for debugging and testing, and one for deployment, like these examples:

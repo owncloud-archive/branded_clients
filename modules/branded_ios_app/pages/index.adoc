@@ -1,5 +1,4 @@
 = Creating Branded iOS Apps
 
-:toc:
 
 

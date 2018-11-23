@@ -1,6 +1,5 @@
 = Building Your iOS App With ownBrander
 
-:toc:
 
 At long last you have arrived at the point where you can actually build your branded iOS app. Log into your account on https://customer.owncloud.com/owncloud/[Customer.owncloud.com/owncloud] and open the ownBrander app.
 

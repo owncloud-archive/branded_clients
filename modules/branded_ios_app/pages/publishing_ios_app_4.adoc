@@ -1,6 +1,5 @@
 = Setting up Testing Devices
 
-:toc:
 
 The $99 Apple Developer account allows you to test your iOS apps on a maximum of 100 devices of each type:
 

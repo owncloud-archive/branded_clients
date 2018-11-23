@@ -1,6 +1,5 @@
 = Testing Your New Branded iOS App
 
-:toc:
 
 You’ll distribute the file with the .ipa extension, like our example MyBiz iOS App-3.4.211.ipa, from your https://customer.owncloud.com/owncloud account to your beta testers. To do this you’ll need a Mac computer, an iPhone or iPad registered in your Apple developer account, and the iTunes account associated with your Apple developer account.
 

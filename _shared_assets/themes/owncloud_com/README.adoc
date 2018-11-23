@@ -1,6 +1,5 @@
 = Sphinx Bootstrap Theme
 
-:toc:
 
 This repository integrates the Twitter http://twitter.github.com/bootstrap/[Bootstrap] CSS / JavaScript framework as a http://sphinx.pocoo.org/[Sphinx] http://sphinx.pocoo.org/theming.html[theme]. A live http://ryan-roemer.github.com/sphinx-bootstrap-theme[demo] is available to preview the theme.
 
