@@ -1,0 +1,2 @@
+* xref:branded_desktop_client.adoc[Building a Branded Desktop Sync Client]
+** xref:update_branded_desktop_clients.adoc[Updating Your Branded Desktop Clients]
