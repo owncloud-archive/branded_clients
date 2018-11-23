@@ -1,5 +1,5 @@
-Building a Branded Desktop Sync Client
-======================================
+= Building a Branded Desktop Sync Client
+
 :toc:
 
 To build a branded Desktop sync client you need to supply your own artwork, and use the ownBrander wizard in your account on https://customer.owncloud.com/owncloud[Customer.owncloud.com]. The ownBrander wizard details the required image specifications.

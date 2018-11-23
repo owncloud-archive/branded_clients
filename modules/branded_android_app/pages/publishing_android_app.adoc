@@ -1,5 +1,5 @@
-Distributing Your Branded Android App
-=====================================
+= Distributing Your Branded Android App
+
 :toc:
 
 Now that you have created your branded Android app with ownCloud’s ownBuilder service (building_branded_android_client) how do you distribute it to your users? There are multiple ways: email, publish_server, or publish_google_play. However you distribute it, the first step is to digitally sign your new app. Signing your app verifies authorship and authenticity.
@@ -14,7 +14,7 @@ acmecloud_2.0.0-release-unsigned.apk
 The second `.apk` file, `acmecloud_2.0.0-release-unsigned.apk`, is the one you will sign and distribute.
 
 [[digitally-signing-android-apps]]
-= Digitally Signing Android Apps
+== Digitally Signing Android Apps
 
 Signing your app is required. You can do this in the ownBrander 
 wizard <sign_android_app>, or after it is built and delivered to you. The most time-consuming part of signing the built app is installing the commands you need to sign it. You need three commands to sign your app: `keytool`, `jarsigner`, and `zipalign`. Follow these steps:
@@ -27,7 +27,7 @@ wizard <sign_android_app>, or after it is built and delivered to you. The most t
 You only need to create a certificate once, and then use it to sign all of your branded ownCloud apps. If you publish your apps on Google Play they must all be signed with the same certificate.
 
 [[installing-the-app-signing-tools]]
-== Installing the App Signing Tools
+=== Installing the App Signing Tools
 
 `keytool` and `jarsigner` are in Java runtimes. Linux users can get these in OpenJDK. For example, on current versions of Debian, Mint, and Ubuntu Linux you need to install two packages. The first one supplies `keytool` and the second one supplies `jarsigner`:
 
@@ -75,7 +75,7 @@ tools/android update sdk --no-ui
 This will take some time, as it is a large download. When it’s finished you’ll find `zipalign` in the `build-tools` directory. For convenience, you could copy `zipalign` to your home folder or other location of your choice, and to any other computer without installing the whole Android SDK.
 
 [[digitally-signing-your-app]]
-== Digitally Signing Your App
+=== Digitally Signing Your App
 
 After installing your signing tools, signing your app takes just a few steps. In these examples the name of the app, as supplied by ownBuilder, is `acmecloud_1.7.0-release-unsigned.apk`.
 
@@ -173,7 +173,7 @@ Verifying alignment of acmecloud_1.7.0.apk (4)...
 Again, this emits a lot of output, and when you see *Verification succesful* at the end you know it succeeded, and it is ready to distribute.
 
 [[distribution-via-email]]
-= Distribution via Email
+== Distribution via Email
 
 You can download your branded Android app from your account on https://customer.owncloud.com/owncloud[Customer.owncloud.com], and send it as an email attachment to your users. (This is not the optimal way to distribute it as it is over 2 megabytes in size.) When they open your email on their Android phone or tablet, they must first click the the download arrow (bottom right of the screenshot) to download your app.
 
@@ -190,12 +190,12 @@ image:images/android_custom_3.png[image]
 When the installation is complete, the https://doc.owncloud.com/android/[ownCloud Android App Manual] contains instructions for using the app.
 
 [[publish-on-your-owncloud-server]]
-= Publish On Your ownCloud Server
+== Publish On Your ownCloud Server
 
 You can distribute your branded app from your ownCloud server. Simply upload it to your ownCloud server and share it like any other file: you can create normal ownCloud shares with ownCloud users and groups, and you may create a link share to share it with anyone. (See the *Files & Synchronization* section of the https://doc.owncloud.org/server/9.0/user_manual/files/index.html[ownCloud User Manual] to learn more about sharing files.)
 
 [[publish-to-the-google-play-store]]
-= Publish to the Google Play Store
+== Publish to the Google Play Store
 
 You may elect to publish your app in the Google Play store, either as a free or paid app. There are several steps to publishing a free app:
 
@@ -206,7 +206,7 @@ You may elect to publish your app in the Google Play store, either as a free or 
 As part of creating your Google Play Publisher account you will have to create some screenshots of your app in specific sizes, and create a store description.
 
 [[create-a-google-play-publisher-account]]
-== Create a Google Play Publisher Account
+=== Create a Google Play Publisher Account
 
 Start at Google’s http://developer.android.com/distribute/googleplay/start.html[Get Started With Publishing] page. Have a credit card ready, because it costs $25. If you already have a Google account, it is usually better to create a separate new account just for publishing apps to the Google Play Store.
 
@@ -249,7 +249,7 @@ image:images/android_custom_13.png[image]
 Now you may upload your app.
 
 [[uploading-to-google-play-store]]
-== Uploading to Google Play Store
+=== Uploading to Google Play Store
 
 Now you can upload your app to your Google Play Store page. Go to the *APK* page and click *Upload your first APK to Production*. You don’t need a license key for a free app.
 
@@ -284,7 +284,7 @@ Now all you need to do is distribute the URL to your users, and they can install
 image:images/android_custom_25.png[image]
 
 [[customize-download-link]]
-= Customize Download Link
+== Customize Download Link
 
 You may configure the URLs to your own download repositories for your ownCloud desktop clients and mobile apps in config/config.php. This example shows the default download locations:
 
@@ -314,7 +314,7 @@ unset OCC_UPDATE_URL
 ....
 
 [[publishing-a-paid-app-in-google-play]]
-== Publishing a Paid App in Google Play
+=== Publishing a Paid App in Google Play
 
 If you would rather not give your branded app away you can sell it on Google Play. You may convert a paid app to free, but you may not convert a free app to paid.
 
@@ -325,7 +325,7 @@ image:images/android_custom_26.png[image]
 When you’re ready to set it up, click the *Set up a merchant account now* link under the Free/Paid button.
 
 [[resources]]
-= Resources
+== Resources
 
 * http://developer.android.com/distribute/googleplay/start.html[Get Started With Publishing]
 * https://developer.android.com/tools/publishing/app-signing.html#signing-manually[Signing Your App Manually]

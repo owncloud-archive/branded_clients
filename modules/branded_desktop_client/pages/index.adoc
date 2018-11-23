@@ -1,5 +1,5 @@
-Building a Branded Desktop Sync Client
-======================================
+= Building a Branded Desktop Sync Client
+
 :toc:
 
 

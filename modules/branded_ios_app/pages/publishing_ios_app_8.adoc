@@ -1,5 +1,5 @@
-Testing Your New Branded iOS App
-================================
+= Testing Your New Branded iOS App
+
 :toc:
 
 You’ll distribute the file with the .ipa extension, like our example MyBiz iOS App-3.4.211.ipa, from your https://customer.owncloud.com/owncloud account to your beta testers. To do this you’ll need a Mac computer, an iPhone or iPad registered in your Apple developer account, and the iTunes account associated with your Apple developer account.
@@ -16,7 +16,7 @@ Your other testers can now install and test your app on their registered iPhones
 If you have the Enterprise Apple developer account, there is no limit on the number of testing devices, and they do not have to be registered.
 
 [[getting-crash-reports-from-testers]]
-= Getting Crash Reports From Testers
+== Getting Crash Reports From Testers
 
 iOS automatically records crash logs when apps crash. Your testers can retrieve and send these logs to you. They must follow these steps:
 

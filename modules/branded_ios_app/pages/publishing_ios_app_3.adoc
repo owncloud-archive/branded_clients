@@ -1,11 +1,11 @@
-Create Bundle IDs
-=================
+= Create Bundle IDs
+
 :toc:
 
 The next step is to create four *Bundle IDs*. These are unique identifiers for your branded iOS app. You must also create an *App Group* and place your three *Bundle IDs* in your *App Group*. You will need your base *Bundle ID* and *App Group* when you build your app with the ownBrander app on https://customer.owncloud.com/owncloud[Customer.owncloud.com].
 
 [[create-app-id]]
-= Create App ID
+== Create App ID
 
 Now you must create your App ID. Go to *Identifiers > App IDs* and click the plus button (top right) to open the ``Register iOS App ID'' screen. Fill in your *App ID Description*, which is anything you want, so make it helpful and descriptive. The *App ID Prefix* is your Apple Developer Team ID, and is automatically entered for you.
 
@@ -24,7 +24,7 @@ When you are finished you will see a confirmation. Click the *Done* button at th
 image:images/cert-12.png[image]
 
 [[create-app-group]]
-= Create App Group
+== Create App Group
 
 The next step is to create an App Group and put your App ID in it. Go to *Identifiers > App Groups* and click the plus button (top right).
 
@@ -61,7 +61,7 @@ image:images/cert-20.png[image]
 The next screen asks you to ``Review and confirm the App Groups you have selected''. Click the *Assign* button to confirm. The next screen announces ``You have successfully updated the App Groups associations with your App ID'', and you must click yet another button, the *Done* button at the bottom.
 
 [[create-a-documentprovider-bundle-id]]
-= Create a DocumentProvider Bundle ID
+== Create a DocumentProvider Bundle ID
 
 Now you must return to *Identifiers > App IDs* and click the plus button to create a DocumentProvider Bundle ID. Follow the same naming conventions as for your App ID, then click *Continue*.
 
@@ -88,7 +88,7 @@ image:images/cert-29.png[image]
 Once again you will asked if you really mean it. On the confirmation screen click *Assign*, and you’ll see the message ``You have successfully updated the App Groups associations with your App ID.''
 
 [[create-a-documentproviderfileprovider-bundle-id]]
-= Create a DocumentProviderFileProvider Bundle ID
+== Create a DocumentProviderFileProvider Bundle ID
 
 One more time, go to *Identifiers > App IDs* and click the plus button to create a DocumentProviderFileProvider Bundle ID. Follow the same naming conventions as for your App ID, then click *Continue*.
 
@@ -113,7 +113,7 @@ image:images/cert-34.png[image]
 On the confirmation screen click *Assign*, and you’ll see the message ``You have successfully updated the App Groups associations with your App ID.''
 
 [[create-a-shareextapp-bundle-id]]
-= Create a ShareExtApp Bundle ID
+== Create a ShareExtApp Bundle ID
 
 This supports Apple’s ShareIN extension.
 
@@ -140,7 +140,7 @@ image:images/cert-57.png[image]
 On the confirmation screen click *Assign*, and you’ll see the message ``You have successfully updated the App Groups associations with your App ID.''
 
 [[four-completed-app-ids]]
-= Four Completed App IDs
+== Four Completed App IDs
 
 Now you should have four new App IDs, and all of them should belong to your App Group.
 

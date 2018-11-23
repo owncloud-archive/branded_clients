@@ -1,11 +1,11 @@
-Create Provisioning Profiles
-============================
+= Create Provisioning Profiles
+
 :toc:
 
 The next phase of this glorious journey is to create eight provisioning profiles: 4 Ad Hoc and 4 App Store <app_store_profiles_label>. You will email the four Ad Hoc profiles, and your P12 certificate <publishing_ios_app_6> (which you will create after your provisioning profiles), to support@owncloud.com after building your branded app with the ownBrander app on https://customer.owncloud.com/owncloud[Customer.owncloud.com]. *Do not send us the App Store profiles.* All eight of these profiles must be stored on your Mac PC.
 
 [[first-ad-hoc-provisioning-profile]]
-= First Ad Hoc Provisioning Profile
+== First Ad Hoc Provisioning Profile
 
 Go to *Provisioning Profiles > All*, then click the plus button (top right) to open the _Add iOS Provisioning Profile_ screen. Select *Ad Hoc* and click *Continue*.
 
@@ -36,7 +36,7 @@ Find it on your Mac (usually the Download folder) and double-click to install it
 image:images/cert-41.png[image]
 
 [[second-ad-hoc-provisioning-profile]]
-= Second Ad Hoc Provisioning Profile
+== Second Ad Hoc Provisioning Profile
 
 Return to the ``Your provision profile is ready'' screen, scroll to the bottom and click *Add Another*. On the following screen select *Ad Hoc* and click *Continue*.
 
@@ -61,7 +61,7 @@ image:images/cert-44.png[image]
 Just like the first provisioning profile, download it to your Mac computer, and then double-click to install it in Xcode.
 
 [[third-ad-hoc-provisioning-profile]]
-= Third Ad Hoc Provisioning Profile
+== Third Ad Hoc Provisioning Profile
 
 Return to the ``Your provision profile is ready'' screen, scroll to the bottom and click *Add Another*. On the following screen select *Ad Hoc* and click *Continue*.
 
@@ -86,7 +86,7 @@ image:images/cert-47.png[image]
 Download it to your Mac computer, and then double-click to install it in Xcode.
 
 [[fourth-ad-hoc-provisioning-profile]]
-= Fourth Ad Hoc Provisioning Profile
+== Fourth Ad Hoc Provisioning Profile
 
 Return to the ``Your provision profile is ready'' screen, scroll to the bottom and click *Add Another*. On the following screen select *Ad Hoc* and click *Continue*.
 
@@ -113,7 +113,7 @@ Download it to your Mac computer, and then double-click to install it in Xcode. 
 image:images/cert-59.png[image]
 
 [[create-four-app-store-profiles]]
-= Create Four App Store Profiles
+== Create Four App Store Profiles
 
 Creating your four App Store profiles is the same as creating your Ad Hoc profiles, except that when you start you check the App Store checkbox, and you won’t select testing devices.
 

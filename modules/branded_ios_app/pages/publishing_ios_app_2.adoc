@@ -1,5 +1,5 @@
-Create Certificate Signing Request
-==================================
+= Create Certificate Signing Request
+
 :toc:
 
 Start by creating a .certSigningRequest (CSR) file on your Mac, using Keychain Access. Open Finder, and then open Keychain Access from the Utilities folder.

@@ -1,5 +1,5 @@
-Building and Distributing Your Branded iOS App
-==============================================
+= Building and Distributing Your Branded iOS App
+
 :toc:
 
 See the https://github.com/owncloud/branded_clients/wiki/Branded-ownCloud-Clients-FAQ[FAQ for additional information] such as logging into multiple servers, error messages, cryptography export exemptions, and issues with publishing on iTunes.
@@ -7,7 +7,7 @@ See the https://github.com/owncloud/branded_clients/wiki/Branded-ownCloud-Client
 Building and distributing your branded iOS ownCloud app involves a large number of interdependent steps. The process is detailed in this chapter over several pages. Follow these instructions exactly and in order, and you will have a nice branded iOS app that you can distribute to your users.
 
 [[prerequisites]]
-= Prerequisites
+== Prerequisites
 
 * A Mac OS X computer with Xcode (free download) and Keychain Access (included in Utilities). This computer is essential to the entire process and will be linked to to your iOS Developer account. You will use it create and store distribution certificates, and to upload your app to iTunes Connect.
 * An iOS developer account on https://developer.apple.com/ios/[Developer.Apple.com/ios], which costs $99 per year. Or an Enterprise account for $299/yr. The developer account limits you to testing on 100 devices of each type (Apple TV, Apple Watch, iPad, iPhone, iPod Touch) which must be registered in your account. The Enterprise account allows testing on unlimited, unregistered devices.
@@ -15,7 +15,7 @@ Building and distributing your branded iOS ownCloud app involves a large number 
 * Some iPhones or iPads for testing your app. Again, if you have the $99 developer account each device must have its UDID registered in your account on https://developer.apple.com[Developer.Apple.com].
 
 [[procedure]]
-= Procedure
+== Procedure
 
 You need the Apple tools to build eight provisioning profiles (4 Ad Hoc and 4 App Store) and a P12 certificate. You will email the four Ad Hoc profiles and P12 certificate to support@owncloud.com after building your app with the ownBrander app on https://customer.owncloud.com/owncloud[Customer.owncloud.com]. You must create the provisioning profiles and P12 certificate first, before building your app, because you must supply a unique *bundle ID* and an *app group* to build your app. These are created in your account on https://developer.apple.com[Developer.Apple.com], and with Keychain Access on your Mac computer.
 

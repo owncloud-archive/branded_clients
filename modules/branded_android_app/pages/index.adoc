@@ -1,5 +1,5 @@
-Building Branded Android Apps
-=============================
+= Building Branded Android Apps
+
 :toc:
 
 
