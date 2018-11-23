@@ -1,2 +1,18 @@
-* The ownCloud Branded Clients Documentation
-** xref:index.adoc[Overview]
+* xref:index.adoc[Overview]
+* Creating Branded Desktop Client¶
+** xref:branded_desktop_client/branded_desktop_client.adoc[Building a Branded Desktop Sync Client]
+** xref:branded_desktop_client/update_branded_desktop_clients.adoc[Update a Branded Desktop Client]
+* Creating Branded iOS Apps¶
+** xref:branded_ios_app/publishing_ios_app.adoc[Building and Distributing Your Branded iOS App]
+** xref:branded_ios_app/publishing_ios_app_2.adoc[Create Certificate Signing Request]
+** xref:branded_ios_app/publishing_ios_app_3.adoc[Create Bundle IDs]
+** xref:branded_ios_app/publishing_ios_app_4.adoc[Setting up Testing Devices]
+** xref:branded_ios_app/publishing_ios_app_5.adoc[Create Provisioning Profiles]
+** xref:branded_ios_app/publishing_ios_app_6.adoc[Creating a P12 Certificate]
+** xref:branded_ios_app/publishing_ios_app_7.adoc[Building Your iOS App With ownBrander]
+** xref:branded_ios_app/publishing_ios_app_8.adoc[Testing Your New Branded iOS App]
+** xref:branded_ios_app/publishing_ios_app_9.adoc[Publishing Your New Branded iOS App]
+** xref:branded_ios_app/faq_ios_app_review_team.adoc[FAQ iOS App Review Team]
+* Building Branded Android Apps
+** xref:branded_android_app/building_branded_android_client.adoc[Building Your App With ownBrander]
+** xref:branded_android_app/publishing_android_app.adoc[Distributing Your Branded Android App]
