@@ -67,6 +67,11 @@ clean:
 	@-rm -rf $(BUILDDIR)/*
 	@echo 
 
+html:
+	@echo "Building HTML version of the documentation"
+	antora generate --stacktrace --pull site.yml
+	@echo
+
 #
 # Installs the Antora command-line tools locally, so that users only have to do as little as possible
 # to get up and running.
