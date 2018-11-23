@@ -8,6 +8,8 @@
     "antora-lunr": "v0.1.0"
   },
   "devDependencies": {
+    "broken-link-checker": "^0.7.8",
+    "serve": "^10.1.1",
     "yaml-lint": "^1.2.4"
   },
   "scripts": {
