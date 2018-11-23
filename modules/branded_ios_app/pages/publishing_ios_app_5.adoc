@@ -1,12 +1,13 @@
 = Create Provisioning Profiles
 
-:toc:
 
-The next phase of this glorious journey is to create eight provisioning profiles: 4 Ad Hoc and 4 App Store <app_store_profiles_label>. You will email the four Ad Hoc profiles, and your P12 certificate <publishing_ios_app_6> (which you will create after your provisioning profiles), to support@owncloud.com after building your branded app with the ownBrander app on https://customer.owncloud.com/owncloud[Customer.owncloud.com]. *Do not send us the App Store profiles.* All eight of these profiles must be stored on your Mac PC.
+The next phase of this glorious journey is to create eight provisioning profiles: 4 Ad Hoc and 4 App Store <app_store_profiles_label>.
+You will email the four Ad Hoc profiles, and your P12 certificate <publishing_ios_app_6> (which you will create after your provisioning profiles), to support@owncloud.com after building your branded app with the ownBrander app on https://customer.owncloud.com/owncloud[Customer.owncloud.com]. *Do not send us the App Store profiles.* All eight of these profiles must be stored on your Mac PC.
 
 == First Ad Hoc Provisioning Profile
 
-Go to *Provisioning Profiles > All*, then click the plus button (top right) to open the _Add iOS Provisioning Profile_ screen. Select *Ad Hoc* and click *Continue*.
+Go to *Provisioning Profiles > All*, then click the plus button (top right) to open the _Add iOS Provisioning Profile_ screen.
+Select *Ad Hoc* and click *Continue*.
 
 image:cert-35.png[image]
 
@@ -36,7 +37,8 @@ image:cert-41.png[image]
 
 == Second Ad Hoc Provisioning Profile
 
-Return to the ``Your provision profile is ready'' screen, scroll to the bottom and click *Add Another*. On the following screen select *Ad Hoc* and click *Continue*.
+Return to the "Your provision profile is ready" screen, scroll to the bottom and click *Add Another*.
+On the following screen select *Ad Hoc* and click *Continue*.
 
 image:cert-35.png[image]
 
@@ -48,7 +50,8 @@ Select the certificate that you created at the beginning of this process and cli
 
 image:cert-43.png[image]
 
-Select the devices that you want to install and test your app on, then click *Continue*. These must be the same devices you selected for the first provisioning profile.
+Select the devices that you want to install and test your app on, then click *Continue*.
+These must be the same devices you selected for the first provisioning profile.
 
 image:cert-39.png[image]
 
@@ -60,7 +63,8 @@ Just like the first provisioning profile, download it to your Mac computer, and 
 
 == Third Ad Hoc Provisioning Profile
 
-Return to the ``Your provision profile is ready'' screen, scroll to the bottom and click *Add Another*. On the following screen select *Ad Hoc* and click *Continue*.
+Return to the "Your provision profile is ready" screen, scroll to the bottom and click *Add Another*.
+On the following screen select *Ad Hoc* and click *Continue*.
 
 image:cert-35.png[image]
 
@@ -72,11 +76,13 @@ Select the certificate that you created at the beginning of this process and cli
 
 image:cert-43.png[image]
 
-Select the devices that you want to install and test your app on, then click *Continue*. These must be the same devices you selected for the first provisioning profile.
+Select the devices that you want to install and test your app on, then click *Continue*.
+These must be the same devices you selected for the first provisioning profile.
 
 image:cert-39.png[image]
 
-Give this provisioning profile the same name as your first profile plus *.DocumentProviderFileProvider* and click *Generate*. There is a 50-character limit, but don’t worry about counting characters because it will be automatically truncated if you go over.
+Give this provisioning profile the same name as your first profile plus *.DocumentProviderFileProvider* and click *Generate*.
+There is a 50-character limit, but don’t worry about counting characters because it will be automatically truncated if you go over.
 
 image:cert-47.png[image]
 
@@ -84,7 +90,8 @@ Download it to your Mac computer, and then double-click to install it in Xcode.
 
 == Fourth Ad Hoc Provisioning Profile
 
-Return to the ``Your provision profile is ready'' screen, scroll to the bottom and click *Add Another*. On the following screen select *Ad Hoc* and click *Continue*.
+Return to the "Your provision profile is ready" screen, scroll to the bottom and click *Add Another*.
+On the following screen select *Ad Hoc* and click *Continue*.
 
 image:cert-35.png[image]
 
@@ -96,15 +103,18 @@ Select the certificate that you created at the beginning of this process and cli
 
 image:cert-43.png[image]
 
-Select the devices that you want to install and test your app on, then click *Continue*. These must be the same devices you selected for the first provisioning profile.
+Select the devices that you want to install and test your app on, then click *Continue*.
+These must be the same devices you selected for the first provisioning profile.
 
 image:cert-39.png[image]
 
-Give this provisioning profile the same name as your first profile plus *.ShareExtApp* and click *Generate*. There is a 50-character limit, but don’t worry about counting characters because it will be automatically truncated if you go over.
+Give this provisioning profile the same name as your first profile plus *.ShareExtApp* and click *Generate*.
+There is a 50-character limit, but don’t worry about counting characters because it will be automatically truncated if you go over.
 
 image:cert-58.png[image]
 
-Download it to your Mac computer, and then double-click to install it in Xcode. You should now see all of your Ad Hoc provisioning profiles listed in your ``iOS Provisioning Profiles''.
+Download it to your Mac computer, and then double-click to install it in Xcode.
+You should now see all of your Ad Hoc provisioning profiles listed in your "iOS Provisioning Profiles".
 
 image:cert-59.png[image]
 
@@ -114,7 +124,8 @@ Creating your four App Store profiles is the same as creating your Ad Hoc profil
 
 image:cert-62.png[image]
 
-When you’re finished, you’ll have eight new provisioning profiles. Remember, when you build your app on ownBuilder you only send in the four Ad Hoc profiles, plus your P12 certificate.
+When you’re finished, you’ll have eight new provisioning profiles.
+Remember, when you build your app on ownBuilder you only send in the four Ad Hoc profiles, plus your P12 certificate.
 
 image:cert-61.png[image]
 

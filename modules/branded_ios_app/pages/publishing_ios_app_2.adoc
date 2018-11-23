@@ -1,8 +1,8 @@
 = Create Certificate Signing Request
 
-:toc:
 
-Start by creating a .certSigningRequest (CSR) file on your Mac, using Keychain Access. Open Finder, and then open Keychain Access from the Utilities folder.
+Start by creating a .certSigningRequest (CSR) file on your Mac, using Keychain Access.
+Open Finder, and then open Keychain Access from the Utilities folder.
 
 image:mac-1.png[image]
 
@@ -10,7 +10,9 @@ Next, open *Keychain Access > Certificate Assistant > Request a Certificate From
 
 image:mac-2.png[image]
 
-Enter the email address that you use in your Apple developer account, and enter a common name. The common name can be anything you want, for example a helpful descriptive name like ``ios-mybiz''. Check *Saved to disk* and *Let me specify key pair information*, then click *Continue*.
+Enter the email address that you use in your Apple developer account, and enter a common name.
+The common name can be anything you want, for example a helpful descriptive name like "ios-mybiz".
+Check *Saved to disk* and *Let me specify key pair information*, then click *Continue*.
 
 image:mac-3.png[image]
 
@@ -18,11 +20,13 @@ Give your CSR a helpful descriptive name, such as *iosapp.certSigningRequest*, a
 
 image:mac-4.png[image]
 
-In the next window, set the *Key Size* value to *2048 bits* and *Algorithm* to *RSA*, and click *Continue*. This will create and save your certSigningRequest file (CSR) to your hard drive.
+In the next window, set the *Key Size* value to *2048 bits* and *Algorithm* to *RSA*, and click *Continue*.
+This will create and save your certSigningRequest file (CSR) to your hard drive.
 
 image:mac-5.png[image]
 
-In the next screen your certificate creation is verified. Click a button to view it, or click *Done* to go to the next step.
+In the next screen your certificate creation is verified.
+Click a button to view it, or click *Done* to go to the next step.
 
 image:mac-6.png[image]
 
@@ -30,11 +34,13 @@ You also get a corresponding public and private key pair, which you can see in t
 
 image:mac-7.png[image]
 
-Double-click on your new private key to open the Access Control dialog. Check *Allow all applications to access this item*.
+Double-click on your new private key to open the Access Control dialog.
+Check *Allow all applications to access this item*.
 
 image:mac-8.png[image]
 
-Now login to the *Member Center* on https://developer.apple.com/. Click *Certificates, Identifiers, & Profiles*.
+Now login to the *Member Center* on https://developer.apple.com/.
+Click *Certificates, Identifiers, & Profiles*.
 
 image:cert-1.png[image]
 
@@ -46,15 +52,17 @@ Next, click the add button (the little plus sign) in the top right corner of the
 
 image:cert-3.png[image]
 
-Under ``What type of certificate do you need?'' check *App Store and Ad Hoc*, then click the *Continue* button at the bottom of the page.
+Under "What type of certificate do you need?" check *App Store and Ad Hoc*, then click the *Continue* button at the bottom of the page.
 
 image:cert-4.png[image]
 
-The next screen, *About Creating a Certificate Signing Request (CSR)* has information about creating a CSR in Keychain Access. You already did this, so go to the next screen. ``Add iOS Certificate'', to upload the CSR you already created, then click the *Generate* button.
+The next screen, *About Creating a Certificate Signing Request (CSR)* has information about creating a CSR in Keychain Access.
+You already did this, so go to the next screen. "Add iOS Certificate", to upload the CSR you already created, then click the *Generate* button.
 
 image:cert-5.png[image]
 
-Your new certificate is named *ios_distribution.cer*. Download it to your Mac; then find it and double-click on it to install it properly in Keychain.
+Your new certificate is named *ios_distribution.cer*.
+Download it to your Mac; then find it and double-click on it to install it properly in Keychain.
 
 image:cert-6.png[image]
 
