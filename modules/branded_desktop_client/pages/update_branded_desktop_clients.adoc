@@ -11,7 +11,6 @@ Clients for Mac OS X and Windows will update themselves automatically. Linux cli
 
 There are times when you may want to disable update notifications. See the examples below to learn how to do this.
 
-[[prerequisites]]
 == Prerequisites
 
 1.  Configure ``Update URL'' in the ``Desktop'' section of your ownBrander account (available for ``advanced'' users only).
@@ -29,7 +28,6 @@ There are times when you may want to disable update notifications. See the examp
   https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz.sig
 * You should have a Web page with links to your branded clients, so your users can find and download them. For example, https://mycloud.example.com/install/ with `Options +Indexes` in your ownCloud `.htaccess` file.
 
-[[install-client-updater-server]]
 == Install client-updater-server
 
 1.  Download `client-updater-server-0.3.tar.xz` from https://customer.owncloud.com/.
@@ -38,7 +36,6 @@ There are times when you may want to disable update notifications. See the examp
 * Example:::
   `config/mycloud.php`
 
-[[configure-client-updater-server]]
 == Configure client-updater-server
 
 All configuration is done in your `config/mycloud.php`:
@@ -75,12 +72,10 @@ $updateInfo = [
 ];
 ....
 
-[[disabling-notifications]]
 === Disabling Notifications
 
 There may be times when you wish to disable update notifications. To do this, make the `'currentVersion'` and `'currentVersionString'` older than the currently installed version. To re-enable notifications, change these to release versions that are newer than the currently installed clients.
 
-[[windows]]
 === Windows
 
 * `'currentVersion'` Exact version of the new client, including the build nr
@@ -88,7 +83,6 @@ There may be times when you wish to disable update notifications. To do this, ma
 * `'updateUrl'` Human-readable Web site with links to your new client files.
 * `'downloadUrl'` Full URL to download the *.exe file. http**s** needed.
 
-[[mac-os-x]]
 === Mac OS X
 
 * `currentVersion'` Exact version of the new client, including the build number.
@@ -98,17 +92,14 @@ There may be times when you wish to disable update notifications. To do this, ma
 * `'signature'` Content of `mycloud-2.1.1.787.pkg.tbz.sig`, adds some extra security to the Mac OS X updater.
 * `'minimumSystemVersion'` Minimum required Mac OS X version according to https://owncloud.org/install/#install-clients.
 
-[[linux]]
 === Linux
 
 * `'currentVersion'` Exact version of the new client, including the build nr
 * `'currentVersionString'`. Name of the new client, same as ``Application name'' configured in ownBrander.
 * `'updateUrl'` Human-readable Web site with links to your new client files to manually install new client versions.
 
-[[debugging-client-updater-server]]
 == Debugging client-updater-server
 
-[[windows-1]]
 === Windows
 
 This a example URL of a 2.1.1 client for Mac OS X: https://mycloud.example.com/updates/?version=2.1.1.140&platform=win32&oem= mycloud
@@ -135,7 +126,6 @@ The output should look like this if you call the URL manually:
    </owncloudclient>
 ....
 
-[[mac-os-x-1]]
 === Mac OS X
 
 This a example URL of a 2.1.1 client for Mac OS X:

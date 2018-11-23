@@ -14,7 +14,6 @@ There are three sections: Required, Suggested, and Advanced. The Required sectio
 
 When you have completed and submitted your app, email your three provisioning profiles and P12 certificate to support@owncloud.com.
 
-[[required-section]]
 == Required Section
 
 Enter your application name. This can be anything; in this example it is the same name used in our signing certificate examples.
@@ -99,17 +98,14 @@ image:ownbrander-34.png[image]
 
 That completes the required elements of your branded iOS app.
 
-[[suggested-section]]
 == Suggested Section
 
 The Suggested section allows you to customize additional elements such as text and background colors, and icons. The Suggested items are all optional.
 
-[[advanced-section]]
 == Advanced Section
 
 The Advanced section allows you to optionally customize the color of messages such as connection status, error messages, letter separators, buttons, and additional icons.
 
-[[generate-ios-app]]
 == Generate iOS App
 
 When you have uploaded all of your images and completed your customizations, click the *Generate iOS App* button and take a well-deserved break. Remember to email your four Ad Hoc provisioning profiles and P12 certificate to support@owncloud.com.

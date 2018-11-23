@@ -15,7 +15,6 @@ Your other testers can now install and test your app on their registered iPhones
 
 If you have the Enterprise Apple developer account, there is no limit on the number of testing devices, and they do not have to be registered.
 
-[[getting-crash-reports-from-testers]]
 == Getting Crash Reports From Testers
 
 iOS automatically records crash logs when apps crash. Your testers can retrieve and send these logs to you. They must follow these steps:
