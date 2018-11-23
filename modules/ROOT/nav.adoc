@@ -1,2 +1,0 @@
-* The ownCloud Branded Clients Documentation
-** xref:index.adoc[Overview]
