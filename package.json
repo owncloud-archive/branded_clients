@@ -1,0 +1,34 @@
+{
+  "name": "branded_client",
+  "version": "1.0.0",
+  "description": "Manuals for building branded iOS, Android, and desktop sync clients.",
+  "dependencies": {
+    "@antora/cli": "^1.1.1",
+    "@antora/site-generator-default": "^1.1.1",
+    "antora-lunr": "v0.1.0"
+  },
+  "devDependencies": {
+    "yaml-lint": "^1.2.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/settermjd/branded_clients.git"
+  },
+  "keywords": [
+    "Antora",
+    "AsciiDoc",
+    "tooling",
+    "ownCloud",
+    "documentation",
+    "branded clients"
+  ],
+  "author": "Matthew Setter <matthew@matthewsetter.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://gitlab.com/settermjd/branded_clients/issues"
+  },
+  "homepage": "https://gitlab.com/settermjd/branded_clients#readme"
+}
