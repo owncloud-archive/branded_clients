@@ -1,5 +1,0 @@
-= Building Branded Android Apps
-
-:toc:
-
-
