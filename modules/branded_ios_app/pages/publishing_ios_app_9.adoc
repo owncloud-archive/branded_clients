@@ -1,0 +1,114 @@
+= Publishing Your New Branded iOS App
+
+:toc:
+
+At last, after following all the previous steps and passing beta testing, your branded iOS app is ready to publish for general distribution on iTunes. You need a Mac computer with Xcode installed (Xcode is a free download), and you need the eight provisioning profiles (4 Ad Hoc and 4 Apple Store) and p12 file that you created copied to the same computer that you are using to upload your app to iTunes. You will also need a number of screenshots of your app in specific sizes and resolutions, which are detailed in your iTunes Connect setup screen.
+
+Apple must review and approve your app, and the approval process can take several days to several weeks.
+
+Download your xcarchive.zip file from your account on https://customer.owncloud.com/owncloud. Your friendly Mac computer will automatically unpack it and change the name to something like Owncloud 
+iOs Client 02-07-15 10.30.xcarchive. Double-click on this file to automatically install it into Xcode. Go to Xcode and you will see it in the Archives listing under *Window > Organizer*.
+
+image:images/ios-publish-2.png[_figure 1_]
+
+Next, go back to the https://developer.apple.com/membercenter/index.action[Apple Developer Member Center] to log into iTunes Connect to set up your app storefront.
+
+image:images/ios-publish-3.png[_figure 2_]
+
+After logging in click the blue *My Apps* button. This takes you to the main screen for managing your apps on iTunes.
+
+image:images/ios-publish.png[_figure 3_]
+
+Click the plus button on the top left to setup your new branded iOS app.
+
+image:images/ios-publish-4.png[_figure 4_]
+
+This opens a screen where you will enter your app information. Make sure you get it right the first time, because it is difficult to delete apps, and Apple will not let you re-use your app name or SKU.
+
+* Enter any name you want for your app. This is the name that will appear in your App Store listing.
+* Choose your primary language.
+* Select the bundle ID from the drop-down selector.
+* Enter your app version number, which should match the version number as it appears in your Xcode organizer.
+* The SKU is a unique ID for your app, and is anything you want.
+
+Then click the *Create* button.
+
+image:images/ios-publish-5.png[_figure 5_]
+
+Now go back to your Xcode organizer to upload your app; click the blue *Submit to App Store* button.
+
+image:images/ios-publish-6.png[_figure 6_]
+
+This takes a few minutes as it verifies your bundle ID and certificates, and then you will see an upload status.
+
+image:images/ios-publish-7.png[_figure 7_]
+
+At long last, after working through this long complex process, you are almost ready to publish your app on iTunes.
+
+[[setting-up-your-itunes-storefront]]
+== Setting up Your iTunes Storefront
+
+There are just a few steps remaining. Now that you have uploaded your branded iOS app, you need to upload some screenshots, an optional demo video, and fill in some information for your app listing on your iTunes storefront. You should see something like this on your main screen (figure 8). You should click the *Save* button at the top right periodically to preserve your changes.
+
+image:images/ios-publish-8.png[_figure 8_]
+
+This screen displays all of your apps and their submission status. Click *Prepare for Submission* to get started on the submission process. The first screen is for entering screenshots of your app for various devices, and optionally a demonstration video. Click the little question marks to learn the required image specifications.
+
+image:images/ios-publish-9.png[image]
+
+Apple simplified the screenshot submission process: https://developer.apple.com/news/?id=08082016a
+
+Please check this Video (in Safari) for details: https://developer.apple.com/videos/play/wwdc2016/305/?time=1700
+
+For the ownCloud client, we also don’t use ``real'' screenshots, we use frames in different sizes instead: https://itunes.apple.com/app/owncloud/id543672169
+
+You can find templates to generate those assets. Here are examples for the Sketch app: https://github.com/LaunchKit/SketchToAppStore https://github.com/MengTo/AppStoreSketch
+
+__________
+_figure 9_
+__________
+
+Then you must enter your app name, a description, some keywords for iTunes searches, and some optional URLs.
+
+image:images/ios-publish-10.png[_figure 10_]
+
+The next section is for Apple Watch. If you don’t support Apple Watch you can skip this.
+
+The *General App Information* section requires a 1024x1024 logo, version, rating, category, license, copyright, and contact information.
+
+image:images/ios-publish-11.png[_figure 11_]
+
+In the *Build* section, click the plus button and select your app.
+
+image:images/ios-publish-14.png[_figure 12_]
+
+The *App Review Information* requires contact information, and some information about your app to guide reviewers. Remember, everyone on iTunes can review your app, so it’s in your best interest to be helpful. You may optionally provide a login for a demo account.
+
+image:images/ios-publish-12.png[_figure 13_]
+
+The *Version Release* section allows you to choose between automatic release, which means your app will be published upon approval, or manual release, where you must release your app after it is approved.
+
+[[pricing]]
+== Pricing
+
+Next, you must go to the *Pricing* page to set your price, and to select the terroritories you want your app to be available in.
+
+image:images/ios-publish-13.png[_figure 14_]
+
+[[submit-for-review]]
+== Submit For Review
+
+When you have filled in all the required forms and provided the required screenshots, click *Save* and then *Submit for Review*. If anything needs to be corrected you will see messages telling you exactly what must be fixed.
+
+The next screen is legalese; click the appropriate Yes or No boxes, and then click the *Submit* button.
+
+You are now finished. No really, you are. When you return to your *My Apps* page you’ll see that the status of your app has changed to ``Waiting for review''. In a few days, or perhaps many days, your app will either be approved or rejected. If it is rejected Apple will tell you what you need to do to get it approved.
+
+[[faq]]
+== FAQ
+
+Here are the most common answers <faq_ios_app_review_team> to questions from the iOS App Review Team.
+
+image:images/ios-publish-15.png[_figure 15_]
+
+When, at last, it is published on iTunes you may distribute the URL so that your users may install and use your app.

@@ -1,173 +1,105 @@
-# Makefile for Sphinx documentation
+# Makefile for the documentation
+
+# 
+# Core configuration 
+# These can be overridden by variables passed on the command-line or environment variables.
 #
+BUILDDIR      = build
+FONTSDIR      = fonts
+STYLESDIR     = resources/themes
+STYLE         = owncloud
+BASEDIR       = $(shell pwd)
+APPVERSION    = 10.0.19
+BRANCH        = $(shell git rev-parse --verify HEAD)
+UI_BUNDLE	  = https://minio.owncloud.com/documentation/ui-bundle.zip
 
-# You can set these variables from the command line.
-SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
-PAPER         =
-BUILDDIR      = _build
+.PHONY: help clean pdf
 
-# Internal variables.
-PAPEROPT_a4     = -D latex_paper_size=a4
-PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
-# the i18n builder cannot share the environment and doctrees with the others
-I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
+#
+# Utility functions to help out with building the manuals.
+#
+define generate_pdf_manual
+	asciidoctor-pdf $(1) \
+		-a pdf-stylesdir=$(STYLESDIR)/ \
+		-a pdf-style=$(STYLE) \
+		-a pdf-fontsdir=$(FONTSDIR) \
+		-a examplesdir=$(BASEDIR)/modules/$(3)/examples/ \
+		-a imagesdir=$(BASEDIR)/modules/$(3)/assets/images/ \
+		-a appversion=$(APPVERSION) \
+		--out-file $(2) \
+		--destination-dir $(BUILDDIR)
+endef
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
+define optimise_pdf_manual
+[ -f $(BUILDDIR)/$(1) ] && \
+	cd $(BUILDDIR) \
+		&& optimize-pdf $(1) \
+		&& rm $(1) \
+		&& rename 's/\-optimized//' * \
+		&& cd -
+endef
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  html       to make standalone HTML files"
-	@echo "  dirhtml    to make HTML files named index.html in directories"
-	@echo "  singlehtml to make a single large HTML file"
-	@echo "  pickle     to make pickle files"
-	@echo "  json       to make JSON files"
-	@echo "  htmlhelp   to make HTML files and a HTML help project"
-	@echo "  qthelp     to make HTML files and a qthelp project"
-	@echo "  devhelp    to make HTML files and a Devhelp project"
-	@echo "  epub       to make an epub"
-	@echo "  latex      to make LaTeX files, you can set PAPER=a4 or PAPER=letter"
-	@echo "  latexpdf   to make LaTeX files and run them through pdflatex"
-	@echo "  pdf        to make PDF files"
-	@echo "  text       to make text files"
-	@echo "  man        to make manual pages"
-	@echo "  texinfo    to make Texinfo files"
-	@echo "  info       to make Texinfo files and run them through makeinfo"
-	@echo "  gettext    to make PO message catalogs"
-	@echo "  changes    to make an overview of all changed/added/deprecated items"
-	@echo "  linkcheck  to check all external links for integrity"
-	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
+	@echo "  check-xrefs    to validate the Xrefs in the source content."
+	@echo "  clean          to clean the build directory of any leftover artifacts from the previous build."
+	@echo "  install        to install the Antora command-line tools."
+	@echo "  pdf            to generate the PDF version of the manual."
 
-clean:
-	-rm -rf $(BUILDDIR)/*
-
-html:   html-org
-
-html-all: html-release html-org html-com
-
-html-release:
-	$(SPHINXBUILD) -b html -D html_theme='owncloud_release' $(ALLSPHINXOPTS) $(BUILDDIR)/html/release
+#
+# Use a limited Antora build to check the Xrefs through the Playbook's source files
+# 
+check-xrefs: 
+	@echo "Checking for invalid Xrefs in all source files"
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/release."
+	antora generate \
+		--generator=./generator/xref-validator \
+		--pull \
+		--stacktrace \
+		--ui-bundle-url $(UI_BUNDLE) \
+		site.yml
 
-html-org:
-	$(SPHINXBUILD) -b html -D html_theme='owncloud_org' $(ALLSPHINXOPTS) $(BUILDDIR)/html/org
+#
+# Remove any build artifacts from previous builds.
+#
+clean:		
+	@echo "Cleaning up any artifacts from the previous build."
+	@-rm -rf $(BUILDDIR)/*
+	@echo 
+
+#
+# Installs the Antora command-line tools locally, so that users only have to do as little as possible
+# to get up and running.
+#
+install: 
+	@echo "Installing Antora's command-line tools (locally)"
+	npm install
+
+#
+# Generate PDF versions of the administration, developer, and user manuals.
+#
+pdf: clean
+	@echo "Building PDF versions of the three core manuals"
+	
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/org."
+	@echo "- Generating the user manual."
+	@$(call generate_pdf_manual,book.user.adoc,user_manual.pdf,user_manual)
+	
+	@echo "- Generating the developer manual."
+	@$(call generate_pdf_manual,book.dev.adoc,developer_manual.pdf,developer_manual)
 
-html-com:
-	$(SPHINXBUILD) -b html -D html_theme='owncloud_com' $(ALLSPHINXOPTS) $(BUILDDIR)/html/com
+	@echo "- Generating the administration manual."
+	@$(call generate_pdf_manual,book.admin.adoc,administration_manual.pdf,administration_manual)
+	
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/com."
+	@echo "Finished building the PDF manuals."
+	@echo "The PDF copy of the manuals have been generated in the build directory: $(BUILDDIR)/."
 
-dirhtml:
-	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
-	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
+check_all_files_prose: 
+	@echo "Checking quality of the prose in all files"
+	write-good --parse modules/{administration,developer,user}_manual/**/*.adoc
 
-singlehtml:
-	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
-	@echo
-	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml."
-
-pickle:
-	$(SPHINXBUILD) -b pickle $(ALLSPHINXOPTS) $(BUILDDIR)/pickle
-	@echo
-	@echo "Build finished; now you can process the pickle files."
-
-json:
-	$(SPHINXBUILD) -b json $(ALLSPHINXOPTS) $(BUILDDIR)/json
-	@echo
-	@echo "Build finished; now you can process the JSON files."
-
-htmlhelp:
-	$(SPHINXBUILD) -b htmlhelp $(ALLSPHINXOPTS) $(BUILDDIR)/htmlhelp
-	@echo
-	@echo "Build finished; now you can run HTML Help Workshop with the" \
-	      ".hhp project file in $(BUILDDIR)/htmlhelp."
-
-qthelp:
-	$(SPHINXBUILD) -b qthelp $(ALLSPHINXOPTS) $(BUILDDIR)/qthelp
-	@echo
-	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
-	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/OwncloudDocumentation.qhcp"
-	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/OwncloudDocumentation.qhc"
-
-devhelp:
-	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
-	@echo
-	@echo "Build finished."
-	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/OwncloudDocumentation"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/OwncloudDocumentation"
-	@echo "# devhelp"
-
-epub:
-	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
-	@echo
-	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
-
-latex:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
-	@echo
-	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
-	@echo "Run \`make' in that directory to run these through (pdf)latex" \
-	      "(use \`make latexpdf' here to do that automatically)."
-
-latexpdf:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
-	@echo "Running LaTeX files through pdflatex..."
-	$(MAKE) -C $(BUILDDIR)/latex all-pdf
-	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
-
-pdf:
-	$(SPHINXBUILD) -b pdf $(ALLSPHINXOPTS) $(BUILDDIR)/pdf
-	@echo
-	@echo "build finished. the text files are in $(BUILDDIR)/pdf."
-
-text:
-	$(SPHINXBUILD) -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text
-	@echo
-	@echo "build finished. the text files are in $(BUILDDIR)/text."
-
-man:
-	$(SPHINXBUILD) -b man $(ALLSPHINXOPTS) $(BUILDDIR)/man
-	@echo
-	@echo "Build finished. The manual pages are in $(BUILDDIR)/man."
-
-texinfo:
-	$(SPHINXBUILD) -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo
-	@echo
-	@echo "Build finished. The Texinfo files are in $(BUILDDIR)/texinfo."
-	@echo "Run \`make' in that directory to run these through makeinfo" \
-	      "(use \`make info' here to do that automatically)."
-
-info:
-	$(SPHINXBUILD) -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo
-	@echo "Running Texinfo files through makeinfo..."
-	make -C $(BUILDDIR)/texinfo info
-	@echo "makeinfo finished; the Info files are in $(BUILDDIR)/texinfo."
-
-gettext:
-	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale
-	@echo
-	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
-
-changes:
-	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes
-	@echo
-	@echo "The overview file is in $(BUILDDIR)/changes."
-
-linkcheck:
-	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
-	@echo
-	@echo "Link check complete; look for any errors in the above output " \
-	      "or in $(BUILDDIR)/linkcheck/output.txt."
-
-doctest:
-	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
-	@echo "Testing of doctests in the sources finished, look at the " \
-	      "results in $(BUILDDIR)/doctest/output.txt."
+FILES=$(shell git diff --staged --name-only $(BRANCH) | grep -E \.adoc$)
+check_staged_files_prose: 
+	@echo "Checking quality of the prose in the changed files"
+	$(foreach file,$(FILES),write-good --parse $(file);)
