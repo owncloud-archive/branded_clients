@@ -4,7 +4,6 @@
 
 This repository integrates the Twitter http://twitter.github.com/bootstrap/[Bootstrap] CSS / JavaScript framework as a http://sphinx.pocoo.org/[Sphinx] http://sphinx.pocoo.org/theming.html[theme]. A live http://ryan-roemer.github.com/sphinx-bootstrap-theme[demo] is available to preview the theme.
 
-[[installation]]
 == Installation
 
 To install the theme, download the theme directory and update your configuration
@@ -43,10 +42,8 @@ html_short_title = "Demo"
 html_logo = "my_logo.png"
 ....
 
-[[theme-notes]]
 == Theme Notes
 
-[[sphinx]]
 === Sphinx
 
 The theme places the global TOC, local TOC, navigation (prev, next) and source links all in the top Bootstrap navigation bar, along with the Sphinx search bar on the left side.
@@ -55,12 +52,10 @@ The global (site-wide) table of contents is the ``Site'' navigation dropdown, wh
 
 Generally speaking, this is a quick and dirty hack to get the basic theme going, so there are likely some oversights and lurking issues. Help and bug filings for the project are most welcome.
 
-[[bootstrap]]
 === Bootstrap
 
 The theme uses Twitter Bootstrap v2.0. You can override any static JS/CSS files by dropping different versions in your Sphinx ``_static'' directory.
 
-[[licenses]]
 == Licenses
 
 Sphinx Bootstrap Theme is licensed under the https://github.com/ryan-roemer/sphinx-bootstrap-theme/blob/master/LICENSE.txt[MIT] license.
