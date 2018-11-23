@@ -1,7 +1,8 @@
 Creating a P12 Certificate
 ==========================
 
-In addition to emailing your four Ad Hoc provisioning profiles to support@owncloud.com, you must also include your P12 certificate. To create this, return to Keychain Access on your Mac computer and find your private key that you created at the beginning (see publishing_ios_app_2).
+In addition to emailing your four Ad Hoc provisioning profiles to support@owncloud.com, you must also include your P12 certificate.
+To create this, return to Keychain Access on your Mac computer and find your private key that you created at the beginning (see publishing_ios_app_2).
 
 image:ios-p12.png[image]
 
@@ -13,7 +14,9 @@ Enter any name you want, the location you want to save it to, and click *Save*.
 
 image:ios-p12-3.png[image]
 
-In the next screen you have the option to enter a password. If you put a password on your P12 certificate you will have to include it when you send your certificate and provisioning profiles to support@owncloud.com. Click *OK*.
+In the next screen you have the option to enter a password.
+If you put a password on your P12 certificate you will have to include it when you send your certificate and provisioning profiles to support@owncloud.com.
+Click *OK*.
 
 image:ios-p12-4.png[image]
 
@@ -25,4 +28,5 @@ Now your new P12 certificate should be in the directory you saved it in.
 
 image:ios-p12-6.png[image]
 
-You have now completed all the necessary steps for signing your branded iOS app. The next step is to build your app with the ownBrander app on https://customer.owncloud.com.
+You have now completed all the necessary steps for signing your branded iOS app.
+The next step is to build your app with the ownBrander app on https://customer.owncloud.com.
