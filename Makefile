@@ -87,18 +87,12 @@ pdf: clean
 	@echo "Building PDF versions of the three core manuals"
 	
 	@echo
-	@echo "- Generating the user manual."
-	@$(call generate_pdf_manual,book.user.adoc,user_manual.pdf,user_manual)
-	
-	@echo "- Generating the developer manual."
-	@$(call generate_pdf_manual,book.dev.adoc,developer_manual.pdf,developer_manual)
-
-	@echo "- Generating the administration manual."
-	@$(call generate_pdf_manual,book.admin.adoc,administration_manual.pdf,administration_manual)
+	@echo "- Generating the PDF manual."
+	@$(call generate_pdf_manual,pdf.adoc,branded_clients_manual.pdf,ROOT)
 	
 	@echo
 	@echo "Finished building the PDF manuals."
-	@echo "The PDF copy of the manuals have been generated in the build directory: $(BUILDDIR)/."
+	@echo "The PDF manual has been generated in the build directory: $(BUILDDIR)/."
 
 check_all_files_prose: 
 	@echo "Checking quality of the prose in all files"
