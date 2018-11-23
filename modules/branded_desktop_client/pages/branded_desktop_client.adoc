@@ -8,7 +8,7 @@ Start with the Common section at the top, and enter information common to all cl
 
 Then go to the Desktop client section of ownBrander, which has two sections, Required and Optional.
 
-image:images/ownbrander-2.png[ownBrander screen for desktop client.]
+image:ownbrander-2.png[ownBrander screen for desktop client.]
 
 Work your way through the wizard, entering required elements and any optional elements you wish. When you have completed the wizard, press the *Generate Desktop Client* button. You will either get messages warning you of any items that need to be corrected, or a success message:
 
