@@ -1,6 +1,6 @@
 name: branded_clients 
 title: Branded Clients 
-version: '2.0' 
+version: 'latest' 
 nav: 
 - modules/ROOT/nav.adoc
 - modules/branded_android_app/nav.adoc
