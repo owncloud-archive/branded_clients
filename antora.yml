@@ -1,8 +1,8 @@
-name: branded_clients 
-title: Branded Clients 
-version: latest
+name: branded_clients
+title: Branded Clients
+version: master
 start_page: ROOT:index.adoc
-nav: 
+nav:
 - modules/ROOT/nav.adoc
 - modules/branded_android_app/nav.adoc
 - modules/branded_ios_app/nav.adoc
