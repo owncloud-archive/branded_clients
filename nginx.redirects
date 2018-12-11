@@ -1,0 +1,2 @@
+# Redirect old links to the new version
+rewrite ^/(branded_clients\/(?![0-9]))(.*)/$ /branded_clients/latest/$1 permanent;
