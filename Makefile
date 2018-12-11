@@ -4,14 +4,14 @@
 # Core configuration 
 # These can be overridden by variables passed on the command-line or environment variables.
 #
-BUILDDIR      = build
-FONTSDIR      = fonts
-STYLESDIR     = resources/themes
-STYLE         = owncloud
-BASEDIR       = $(shell pwd)
-APPVERSION    = 10.0.19
-BRANCH        = $(shell git rev-parse --verify HEAD)
-UI_BUNDLE	  = https://minio.owncloud.com/documentation/ui-bundle.zip
+BASEDIR       ?= $(shell pwd)
+BUILDDIR      ?= build
+CACHE_DIR 	  ?= cache
+FONTSDIR      ?= fonts
+PLAYBOOK 	  ?= site.yml
+STYLE         ?= owncloud
+STYLESDIR     ?= resources/themes
+UI_BUNDLE	  ?= https://minio.owncloud.com/documentation/ui-bundle.zip
 
 .PHONY: help clean pdf
 
