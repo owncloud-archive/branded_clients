@@ -35,49 +35,88 @@ For example, https://mycloud.example.com/install/ with `Options +Indexes` in you
 
 == Install client-updater-server
 
-1.  Download `client-updater-server-0.3.tar.xz` from https://customer.owncloud.com/.
-2.  Extract `client-updater-server-0.3.tar.xz` to your Web server.
+1.  Download `client-updater-server-0.4.tar.xz` from https://customer.owncloud.com/.
+2.  Extract `client-updater-server-0.4.tar.xz` to your Web server.
 The `index.php` must be accessible at `https://mycloud.example.com/updates/index.php`.
-3.  Copy your ownCloud `config/default.php` file, and name it according your *Application short name* as configured in ownBrander.
-* Example:::
-  `config/mycloud.php`
+3.  Copy your ownCloud `config/ownCloud.yml` file, and name it according your *Application short name* as configured in ownBrander.
++
+Example: `config/mycloud.yml`
 
 == Configure client-updater-server
 
-All configuration is done in your `config/mycloud.php`:
+All configuration is done in your `config/mycloud.yml`:
+
+[source]
+....
+throttle: 1 # 100% of the requests get served with the new version
+
+platforms:
+  win32msi:
+    currentVersion: 2.5.0.10598
+    currentVersionString: ownCloud Client 2.5.0 (build 10598)
+    updateUrl: http://owncloud.org/sync-clients
+    downloadUrl: http://download.owncloud.com/desktop/stable/ownCloud-2.5.0.10598.msi
+
+  win32:
+    currentVersion: 2.4.3.10188
+    currentVersionString: ownCloud Client 2.4.3 (build 10188)
+    updateUrl: http://owncloud.org/sync-clients
+    downloadUrl: http://download.owncloud.com/desktop/stable/ownCloud-2.4.3.10188-setup.exe
+
+  linux:
+    currentVersion: 1.8.0
+    currentVersionString: ownCloud Client 1.7.1
+    updateUrl: http://owncloud.org/sync-clients
+
+  macos:
+    currentVersion: 1.8.0.2139
+    currentVersionString: ownCloud Client 1.8.0 (build 2139)
+    downloadUrl: https://download.owncloud.com/desktop/stable/ownCloud-1.8.0.2139.pkg.tbz
+    pubDate: 2015-03-26
+    signature: MCwCFFedScUKeRXYMS6vKVLw821B+/+lAhRbiCxHNzVVZFNXHSvB9GNHOuI5cw==
+    minimumSystemVersion: 10.7.0
+....
+
+
+In earlier versions this configuration was written in PHP, which is still supported but no longer the default. The structure slightly changed and would look like this analoguely to the yml config `config/mycloud.php`:
 
 [source]
 ....
 <?php
 
 $updateInfo = [
-    'win32' => [
-        'currentVersion' => '2.1.1.240',
-        'currentVersionString' => 'MyCloud Client 2.1.1 (build 240)',
-        'updateUrl' => 'https://mycloud.example.com/install/',
-        'downloadUrl' => 
-         'https://mycloud.example.com/install/mycloud-2.1.2.240-setup.exe',
-    ],
-
-    'linux' => array(
-        'currentVersion' => '2.1.1',
-        'currentVersionString' => 'MyCloud Client 2.1.1',
-        'updateUrl' => 'https://mycloud.example.com/install/',
-    ),
-
-    'macos' => array(
-        'currentVersion' => '2.1.1.787',
-        'currentVersionString' => 'MyCloud Client 2.1.1 (build 787)',
-        'downloadUrl' => 
-         'https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz',
-        'pubDate' => '2016-02-23',
-        'signature' => 
-          'MCwCFFedScUKeRXYMS6vKVLw821B+/+lAhRFNXHSvB9GNHOuI5cw==',
-        'minimumSystemVersion' => '10.7.0',
-    ),
-
+    'throttle' => 0.7, // 70% of the requests get served with the new version
+    'platforms' => [
+        'win32msi' => [
+            'currentVersion' => '2.5.0.10598',
+            'currentVersionString' => 'ownCloud Client 2.5.0 (build 10598)',
+            'updateUrl' => 'http://owncloud.org/sync-clients',
+            'downloadUrl' => 'http://download.owncloud.com/desktop/stable/ownCloud-2.5.0.10598.msi',
+        ],
+        'win32' => [
+            'currentVersion' => '2.4.3.10188',
+            'currentVersionString' => 'ownCloud Client 2.4.3 (build 10188)',
+            'updateUrl' => 'http://owncloud.org/sync-clients',
+            'downloadUrl' => 'http://download.owncloud.com/desktop/stable/ownCloud-2.4.3.10188-setup.exe',
+        ],
+        'linux' => array(
+            'currentVersion' => '1.8.0',
+            'currentVersionString' => 'ownCloud Client 1.7.1',
+            'updateUrl' => 'http://owncloud.org/sync-clients',
+        ),
+        'macos' => array(
+            'currentVersion' => '1.8.0.2139',
+            'currentVersionString' => 'ownCloud Client 1.8.0 (build 2139)',
+            'downloadUrl' => 'https://download.owncloud.com/desktop/stable/ownCloud-1.8.0.2139.pkg.tbz',
+            'pubDate' => '2015-03-26',
+            'signature' => 'MCwCFFedScUKeRXYMS6vKVLw821B+/+lAhRbiCxHNzVVZFNXHSvB9GNHOuI5cw==',
+            'minimumSystemVersion' => '10.7.0',
+        ),
+    ]
 ];
 ....
+
+(The former top-level config options were moved under a ``platforms``key.)
 
 === Disabling Notifications
 
