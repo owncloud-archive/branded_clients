@@ -1,4 +1,3 @@
 = Branded Clients
 
-
 See the https://github.com/owncloud/branded_clients/wiki/Branded-ownCloud-Clients-FAQ[FAQ for additional information] such as logging into multiple servers, error messages, cryptography export exemptions, and issues with publishing on iTunes.

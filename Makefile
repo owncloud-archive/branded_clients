@@ -15,30 +15,6 @@ UI_BUNDLE	  = https://minio.owncloud.com/documentation/ui-bundle.zip
 
 .PHONY: help clean pdf
 
-#
-# Utility functions to help out with building the manuals.
-#
-define generate_pdf_manual
-	asciidoctor-pdf $(1) \
-		-a pdf-stylesdir=$(STYLESDIR)/ \
-		-a pdf-style=$(STYLE) \
-		-a pdf-fontsdir=$(FONTSDIR) \
-		-a examplesdir=$(BASEDIR)/modules/$(3)/examples/ \
-		-a imagesdir=$(BASEDIR)/modules/$(3)/assets/images/ \
-		-a appversion=$(APPVERSION) \
-		--out-file $(2) \
-		--destination-dir $(BUILDDIR)
-endef
-
-define optimise_pdf_manual
-[ -f $(BUILDDIR)/$(1) ] && \
-	cd $(BUILDDIR) \
-		&& optimize-pdf $(1) \
-		&& rm $(1) \
-		&& rename 's/\-optimized//' * \
-		&& cd -
-endef
-
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  check-xrefs    to validate the Xrefs in the source content."
@@ -83,16 +59,24 @@ install:
 #
 # Generate PDF versions of the administration, developer, and user manuals.
 #
-pdf: clean
-	@echo "Building PDF versions of the three core manuals"
+.PHONY: pdf
+pdf:
+	@echo "Building PDF manual."
+	asciidoctor-pdf \
+		-a pdf-stylesdir=$(STYLESDIR)/ \
+		-a pdf-style=$(STYLE) \
+		-a pdf-fontsdir=$(FONTSDIR) \
+		-a examplesdir=modules/ROOT/examples \
+		-a imagesdir=modules/ROOT/assets/images \
+		-a appversion=$(VERSION) \
+		--base-dir $(CURDIR) \
+		--out-file Building_Branded_ownCloud_Clients.pdf \
+		--destination-dir $(BUILDDIR) \
+		pdf.adoc
 	
 	@echo
-	@echo "- Generating the PDF manual."
-	@$(call generate_pdf_manual,pdf.adoc,branded_clients_manual.pdf,ROOT)
-	
-	@echo
-	@echo "Finished building the PDF manuals."
-	@echo "The PDF manual has been generated in the build directory: $(BUILDDIR)/."
+	@echo "Finished building the PDF manual."
+	@echo "The PDF copy of the manual has been generated in the build directory: $(BUILDDIR)/."
 
 check_all_files_prose: 
 	@echo "Checking quality of the prose in all files"
