@@ -35,7 +35,7 @@ Check *Server URL Visible* to make your ownCloud server URL the default, and to 
 image:branded_ios_app/ownbrander-16.png[image]
 
 And now, the all-important *Bundle ID*.
-Make sure that this is exactly the same as the *Bundle ID* you created on link:developer.apple.com[Developer.apple.com] (see publishing_ios_app_3).
+Make sure that this is exactly the same as the *Bundle ID* you created on https://developer.apple.com[Developer.apple.com] (see publishing_ios_app_3).
 
 image:branded_ios_app/ownbrander-17.png[image]
 
@@ -99,7 +99,7 @@ You have the options to disable one or both of these.
 image:branded_ios_app/ownbrander-31.png[image]
 
 You may disable background transfers if you are using mobile device management (MDM), such as Mobile Iron, that does not support background jobs, or if you simply do not want to allow the app to work in the background.
-By default, the ownCloud iOS app supports background file transfers by taking advantage of link:[Background Execution. <https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/ iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html>]
+By default, the ownCloud iOS app supports background file transfers by taking advantage of https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html[Background Execution].
 
 image:branded_ios_app/ownbrander-32.png[image]
 
