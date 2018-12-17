@@ -15,7 +15,6 @@ UI_BUNDLE	  ?= https://minio.owncloud.com/documentation/ui-bundle.zip
 
 .PHONY: help clean check-xrefs install
 
-
 .PHONY: help
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -60,3 +59,34 @@ check-xrefs:
 install: 
 	@echo "Installing Antora's command-line tools (locally)"
 	npm install
+
+#
+# Generate PDF versions of the administration, developer, and user manuals.
+#
+.PHONY: pdf
+pdf:
+	@echo "Building PDF manual."
+	asciidoctor-pdf \
+		-a pdf-stylesdir=$(STYLESDIR)/ \
+		-a pdf-style=$(STYLE) \
+		-a pdf-fontsdir=$(FONTSDIR) \
+		-a examplesdir=modules/ROOT/examples \
+		-a imagesdir=modules/ROOT/assets/images \
+		-a appversion=$(VERSION) \
+		--base-dir $(CURDIR) \
+		--out-file Building_Branded_ownCloud_Clients.pdf \
+		--destination-dir $(BUILDDIR) \
+		pdf.adoc
+	
+	@echo
+	@echo "Finished building the PDF manual."
+	@echo "The PDF copy of the manual has been generated in the build directory: $(BUILDDIR)/."
+
+check_all_files_prose: 
+	@echo "Checking quality of the prose in all files"
+	write-good --parse modules/{administration,developer,user}_manual/**/*.adoc
+
+FILES=$(shell git diff --staged --name-only $(BRANCH) | grep -E \.adoc$)
+check_staged_files_prose: 
+	@echo "Checking quality of the prose in the changed files"
+	$(foreach file,$(FILES),write-good --parse $(file);)
