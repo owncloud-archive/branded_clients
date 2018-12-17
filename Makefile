@@ -76,7 +76,7 @@ pdf:
 	
 	@echo
 	@echo "Finished building the PDF manual."
-	@echo "The PDF copy of the manuals have been generated in the build directory: $(BUILDDIR)/."
+	@echo "The PDF copy of the manual has been generated in the build directory: $(BUILDDIR)/."
 
 check_all_files_prose: 
 	@echo "Checking quality of the prose in all files"
