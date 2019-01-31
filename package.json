@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Manuals for building branded iOS, Android, and desktop sync clients.",
   "dependencies": {
-    "@antora/cli": "^1.1.1",
-    "@antora/site-generator-default": "^1.1.1",
+    "@antora/cli": "^2.0",
+    "@antora/site-generator-default": "^2.0",
     "antora-lunr": "v0.1.0"
   },
   "devDependencies": {
