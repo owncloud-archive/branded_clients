@@ -1,0 +1,25 @@
+site:
+  title: ownCloud Branded Clients Documentation 
+
+content:
+  sources:
+  - url: .
+    branches: HEAD
+
+ui:
+  bundle:
+    url: https://minio.owncloud.com/documentation/ui-bundle.zip
+  output_dir: assets
+
+output:
+  clean: true
+  dir: public
+
+asciidoc:
+  attributes:
+    # The following two global attributes:
+    # 1. Remove the auto-generated anchor id prefix
+    # 2. Replace the auto-generated anchor id separator
+    # For more information, see https://asciidoctor.org/docs/user-manual/#auto-generated-ids
+    idprefix: ''
+    idseparator: '-'
