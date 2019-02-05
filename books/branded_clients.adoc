@@ -1,0 +1,35 @@
+= ownCloud Branded Clients Manual
+The ownCloud Team <docs@owncloud.com>
+{revnumber}, {revdate}
+:source-highlighter: rouge
+:homepage: https://github.com/owncloud/branded_clients
+:listing-caption: Listing
+:toc:
+:toclevels: 2
+:icons: font
+:icon-set: octicon
+
+include::modules/ROOT/pages/index.adoc[leveloffset=+1]
+
+== Creating Branded Desktop Client
+
+include::modules/ROOT/pages/branded_desktop_client/branded_desktop_client.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_desktop_client/update_branded_desktop_clients.adoc[leveloffset=+2]
+
+== Creating Branded iOS Apps
+
+include::modules/ROOT/pages/branded_ios_app/publishing_ios_app.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_ios_app/publishing_ios_app_2.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_ios_app/publishing_ios_app_3.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_ios_app/publishing_ios_app_4.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_ios_app/publishing_ios_app_5.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_ios_app/publishing_ios_app_6.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_ios_app/publishing_ios_app_7.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_ios_app/publishing_ios_app_8.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_ios_app/publishing_ios_app_9.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_ios_app/faq_ios_app_review_team.adoc[leveloffset=+2]
+
+== Building Branded Android Apps
+
+include::modules/ROOT/pages/branded_android_app/building_branded_android_client.adoc[leveloffset=+2]
+include::modules/ROOT/pages/branded_android_app/publishing_android_app.adoc[leveloffset=+2]

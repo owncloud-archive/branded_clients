@@ -1,36 +1,53 @@
 {
-  "name": "branded_client",
+  "private": true,
+  "name": "owncloud-branded-clients",
+  "description": "The ownCloud Branded Clients documentation",
   "version": "1.0.0",
-  "description": "Manuals for building branded iOS, Android, and desktop sync clients.",
+  "license": "AGPL-3.0",
+  "author": "The ownCloud Team <docs@owncloud.com>",
+  "homepage": "https://github.com/owncloud/branded_clients#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owncloud/branded_clients.git"
+  },
+  "bugs": {
+    "url": "https://github.com/owncloud/branded_clients/issues"
+  },
+  "contributors": [
+    {
+      "name": "Matthew Setter",
+      "email": "matthew@matthewsetter.com"
+    },
+    {
+      "name": "Martin Mattel",
+      "email": "github@diemattels.at"
+    },
+    {
+      "name": "Thomas Boerger",
+      "email": "tboerger@owncloud.com"
+    }
+  ],
+  "scripts": {
+    "prose": "write-good --parse **/*.adoc",
+    "serve": "http-server public/ -d -i",
+    "antora": "antora --stacktrace generate --cache-dir cache --redirect-facility disabled --clean site.yml",
+    "validate": "antora --stacktrace generate --cache-dir cache --redirect-facility disabled --generator ./generator/xref-validator.js site.yml",
+    "linkcheck": "broken-link-checker --filter-level 3 --recursive --verbose"
+  },
   "dependencies": {
-    "@antora/cli": "^1.1.1",
-    "@antora/site-generator-default": "^1.1.1",
-    "antora-lunr": "v0.1.0"
+    "@antora/cli": "^2.0",
+    "@antora/site-generator-default": "^2.0"
   },
   "devDependencies": {
     "broken-link-checker": "^0.7.8",
-    "serve": "^10.1.1",
-    "yaml-lint": "^1.2.4"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/settermjd/branded_clients.git"
+    "http-server": "^0.11.1",
+    "write-good": "^0.13.1"
   },
   "keywords": [
-    "Antora",
-    "AsciiDoc",
-    "tooling",
-    "ownCloud",
+    "antora",
+    "asciidoc",
     "documentation",
-    "branded clients"
-  ],
-  "author": "Matthew Setter <matthew@matthewsetter.com>",
-  "license": "MPL-2.0",
-  "bugs": {
-    "url": "https://gitlab.com/settermjd/branded_clients/issues"
-  },
-  "homepage": "https://gitlab.com/settermjd/branded_clients#readme"
+    "owncloud",
+    "branding"
+  ]
 }

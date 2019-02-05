@@ -1,6 +1,3 @@
-# Dolphin file manager
-*.directory
-
-# Generated Files
-*build/*
-
+cache/
+node_modules/
+public/

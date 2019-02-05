@@ -57,7 +57,7 @@ image:branded_ios_app/ios-publish-7.png[figure 7]
 At long last, after working through this long complex process, you are almost ready to publish your app on iTunes.
 
 [[setting-up-your-itunes-storefront]]
-= Setting up Your iTunes Storefront
+== Setting up Your iTunes Storefront
 
 There are just a few steps remaining.
 Now that you have uploaded your branded iOS app, you need to upload some screenshots, an optional demo video, and fill in some information for your app listing on your iTunes storefront.
@@ -68,15 +68,15 @@ image:branded_ios_app/ios-publish-8.png[figure 8]
 
 This screen displays all of your apps and their submission status.
 Click btn:[Prepare for Submission] to get started on the submission process.
-The first screen is for entering screenshots of your app for various devices, and optionally a demonstration video. 
+The first screen is for entering screenshots of your app for various devices, and optionally a demonstration video.
 Click the little question marks to learn the required image specifications.
 
 image:branded_ios_app/ios-publish-9.png[figure 9]
 
-Apple simplified {screenshot-submission-process-url}[the screenshot submission process]. 
-Please {screenshot-submission-process-video-url}[check this Video (in Safari)] for details. 
+Apple simplified {screenshot-submission-process-url}[the screenshot submission process].
+Please {screenshot-submission-process-video-url}[check this Video (in Safari)] for details.
 
-For the ownCloud client, we also don't use real screenshots, we use {sized-frames-url}[frames in different sizes instead]. 
+For the ownCloud client, we also don't use real screenshots, we use {sized-frames-url}[frames in different sizes instead].
 You can find templates to generate those assets.
 Here are examples for the Sketch app:
 
@@ -85,9 +85,9 @@ Here are examples for the Sketch app:
 
 Then you must enter:
 
-* Your app name 
-* A description 
-* Some keywords for iTunes searches; and 
+* Your app name
+* A description
+* Some keywords for iTunes searches; and
 * Some optional URLs
 
 image:branded_ios_app/ios-publish-10.png[figure 10]
@@ -97,12 +97,12 @@ If you don't support Apple Watch you can skip this.
 
 The *General App Information* section requires a:
 
-* 1024 x 1024 logo 
-* Version 
-* Rating 
-* Category 
-* License 
-* Copyright, and 
+* 1024 x 1024 logo
+* Version
+* Rating
+* Category
+* License
+* Copyright, and
 * Contact information
 
 image:branded_ios_app/ios-publish-11.png[figure 11]
@@ -119,13 +119,13 @@ image:branded_ios_app/ios-publish-12.png[figure 13]
 
 The *Version Release* section allows you to choose between automatic release, which means your app will be published upon approval, or manual release, where you must release your app after it is approved.
 
-= Pricing
+== Pricing
 
 Next, you must go to the *Pricing* page to set your price, and to select the territories you want your app to be available in.
 
 image:branded_ios_app/ios-publish-13.png[figure 14]
 
-= Submit For Review
+== Submit For Review
 
 When you have filled in all the required forms and provided the required screenshots, click *Save* and then *Submit for Review*.
 If anything needs to be corrected you will see messages telling you exactly what must be fixed.
@@ -138,7 +138,7 @@ When you return to your *My Apps* page you'll see that the status of your app ha
 In a few days, or perhaps many days, your app will either be approved or rejected.
 If it is rejected Apple will tell you what you need to do to get it approved.
 
-= FAQ
+== FAQ
 
 xref:branded_ios_app/faq_ios_app_review_team.adoc[Here are the most common answers to questions] from the iOS App Review Team.
 
