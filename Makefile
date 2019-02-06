@@ -50,4 +50,4 @@ pdf:
 		--base-dir $(CURDIR) \
 		--out-file branded_clients/$(OUTPUT_VERSION)ownCloud_Branded_Clients_Manual.pdf \
 		--destination-dir $(BUILD_DIR) \
-		books/branded_clients.adoc
+		books/ownCloud_Branded_Clients_Manual.adoc
