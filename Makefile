@@ -1,88 +1,68 @@
 # Makefile for the documentation
 
-# 
-# Core configuration 
-# These can be overridden by variables passed on the command-line or environment variables.
-#
-BUILDDIR      = build
-FONTSDIR      = fonts
-STYLESDIR     = resources/themes
-STYLE         = owncloud
-BASEDIR       = $(shell pwd)
-APPVERSION    = 10.0.19
-BRANCH        = $(shell git rev-parse --verify HEAD)
-UI_BUNDLE	  = https://minio.owncloud.com/documentation/ui-bundle.zip
+SHELL ?= bash
 
-.PHONY: help clean pdf
+FONTS_DIR ?= fonts
+STYLES_DIR ?= resources/themes
 
-help:
-	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  check-xrefs    to validate the Xrefs in the source content."
-	@echo "  clean          to clean the build directory of any leftover artifacts from the previous build."
-	@echo "  install        to install the Antora command-line tools."
-	@echo "  pdf            to generate the PDF version of the manual."
+STYLE ?= owncloud
+REVDATE ?= "$(shell date +'%B %d, %Y')"
 
-#
-# Use a limited Antora build to check the Xrefs through the Playbook's source files
-# 
-check-xrefs: 
-	@echo "Checking for invalid Xrefs in all source files"
-	@echo
-	antora generate \
-		--generator=./generator/xref-validator.js \
-		--pull \
-		--stacktrace \
-		--ui-bundle-url $(UI_BUNDLE) \
-		site.yml
+ifndef VERSION
+	ifneq ($(DRONE_TAG),)
+		VERSION ?= $(subst v,,$(DRONE_TAG))
+	else
+		ifneq ($(DRONE_BRANCH),)
+			VERSION ?= $(subst /,,$(DRONE_BRANCH))
+		else
+			VERSION ?= master
+		endif
+	endif
+endif
 
-#
-# Remove any build artifacts from previous builds.
-#
-clean:		
-	@echo "Cleaning up any artifacts from the previous build."
-	@-rm -rf $(BUILDDIR)/*
-	@echo 
+ifndef OUTPUT
+	ifneq ($(VERSION),master)
+		OUTPUT ?= build/branded_clients/$(VERSION)
+	else
+		OUTPUT ?= build/branded_clients
+	endif
+endif
 
-html:
-	@echo "Building HTML version of the documentation"
-	antora generate --stacktrace --pull site.yml
-	@echo
+.PHONY: help
+help: ## Print a basic help about the targets
+	@IFS=$$'\n' ; \
+	help_lines=(`fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##/:/'`); \
+	printf "%-30s %s\n" "target" "help" ; \
+	printf "%-30s %s\n" "------" "----" ; \
+	for help_line in $${help_lines[@]}; do \
+		IFS=$$':' ; \
+		help_split=($$help_line) ; \
+		help_command=`echo $${help_split[0]} | sed -e 's/^ *//' -e 's/ *$$//'` ; \
+		help_info=`echo $${help_split[2]} | sed -e 's/^ *//' -e 's/ *$$//'` ; \
+		printf '\033[36m'; \
+		printf "%-30s %s" $$help_command ; \
+		printf '\033[0m'; \
+		printf "%s\n" $$help_info; \
+	done
 
-#
-# Installs the Antora command-line tools locally, so that users only have to do as little as possible
-# to get up and running.
-#
-install: 
-	@echo "Installing Antora's command-line tools (locally)"
-	npm install
+.PHONY: setup
+setup: ## Install Antora's command tools locally
+	yarn install
 
-#
-# Generate PDF versions of the administration, developer, and user manuals.
-#
+.PHONY: clean
+clean: ## Remove build artifacts from output dir
+	-rm -rf build/
+
 .PHONY: pdf
-pdf:
-	@echo "Building PDF manual."
+pdf: ## Generate PDF version of the manual
 	asciidoctor-pdf \
-		-a pdf-stylesdir=$(STYLESDIR)/ \
+		-a pdf-stylesdir=$(STYLES_DIR)/ \
 		-a pdf-style=$(STYLE) \
-		-a pdf-fontsdir=$(FONTSDIR) \
+		-a pdf-fontsdir=$(FONTS_DIR) \
 		-a examplesdir=modules/ROOT/examples \
 		-a imagesdir=modules/ROOT/assets/images \
-		-a appversion=$(VERSION) \
+		-a revnumber=$(VERSION) \
+		-a revdate=$(REVDATE) \
 		--base-dir $(CURDIR) \
-		--out-file Building_Branded_ownCloud_Clients.pdf \
-		--destination-dir $(BUILDDIR) \
-		pdf.adoc
-	
-	@echo
-	@echo "Finished building the PDF manual."
-	@echo "The PDF copy of the manual has been generated in the build directory: $(BUILDDIR)/."
-
-check_all_files_prose: 
-	@echo "Checking quality of the prose in all files"
-	write-good --parse modules/{administration,developer,user}_manual/**/*.adoc
-
-FILES=$(shell git diff --staged --name-only $(BRANCH) | grep -E \.adoc$)
-check_staged_files_prose: 
-	@echo "Checking quality of the prose in the changed files"
-	$(foreach file,$(FILES),write-good --parse $(file);)
+		--out-file $(OUTPUT)/ownCloud_Branded_Clients_Manual.pdf \
+		books/ownCloud_Branded_Clients_Manual.adoc
