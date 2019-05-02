@@ -12,7 +12,7 @@ image:branded_ios_app/mac-2.png[image]
 
 Enter the email address that you use in your Apple developer account, and enter a common name.
 The common name can be anything you want, for example a helpful descriptive name like "ios-mybiz".
-Check *Saved to disk* and *Let me specify key pair information*, then click btn:[Continue].
+Check btn:[Saved to disk] and btn:[Let me specify key pair information], then click btn:[Continue].
 
 image:branded_ios_app/mac-3.png[image]
 
@@ -35,12 +35,12 @@ You also get a corresponding public and private key pair, which you can see in t
 image:branded_ios_app/mac-7.png[image]
 
 Double-click on your new private key to open the Access Control dialog.
-Check *Allow all applications to access this item*.
+Check btn:[Allow all applications to access this item].
 
 image:branded_ios_app/mac-8.png[image]
 
 Now login to the *Member Center* on https://developer.apple.com/.
-Click btn:[Certificates, Identifiers, & Profiles].
+Click btn:[Certificates, Identifiers & Profiles].
 
 image:branded_ios_app/cert-1.png[image]
 
@@ -48,11 +48,11 @@ Then click *iOS Apps > Certificates*.
 
 image:branded_ios_app/cert-2.png[image]
 
-Next, click the btn:[add button] (the little plus sign) in the top right corner of the *iOS Certificate* page.
+Next, click the btn:[add] button (the little plus sign) in the top right corner of the *iOS Certificate* page.
 
 image:branded_ios_app/cert-3.png[image]
 
-Under "What type of certificate do you need?" check *App Store and Ad Hoc*, then click the btn:[Continue] button at the bottom of the page.
+Under "What type of certificate do you need?" check btn:[App Store and Ad Hoc], then click the btn:[Continue] button at the bottom of the page.
 
 image:branded_ios_app/cert-4.png[image]
 

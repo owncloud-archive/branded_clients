@@ -13,7 +13,7 @@ To do this you’ll need a Mac computer, an iPhone or iPad registered in your Ap
 4.  Click the btn:[Apps] button.
 Now you should see your app in the iTune apps list, with an Install button. Click it.
 5.  The Install button changes to Will Install.
-6.  Click the btn:[sync button] in the lower-right corner to sync your device.
+6.  Click the btn:[sync] button in the lower-right corner to sync your device.
 This installs your app on your device.
 
 Your other testers can now install and test your app on their registered iPhones and iPads just like any other app from iTunes.
@@ -27,5 +27,5 @@ Your testers can retrieve and send these logs to you.
 They must follow these steps:
 
 1.  Connect the testing device to a Mac computer running iTunes.
-2.  The crash logs are automatically downloaded to ~/Library/Logs/CrashReporter/MobileDevice
+2.  The crash logs are automatically downloaded to `~/Library/Logs/CrashReporter/MobileDevice`
 3.  Attach the relevant log files to email and send them to you.
