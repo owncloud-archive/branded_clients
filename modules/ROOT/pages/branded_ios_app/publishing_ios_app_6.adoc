@@ -1,8 +1,8 @@
-Creating a P12 Certificate
-==========================
+= Creating a P12 Certificate
+:experimental:
 
 In addition to emailing your four Ad Hoc provisioning profiles to support@owncloud.com, you must also include your P12 certificate.
-To create this, return to Keychain Access on your Mac computer and find your private key that you created at the beginning (see publishing_ios_app_2).
+To create this, return to Keychain Access on your Mac computer and find your private key that you created at the beginning (see xref:/branded_ios_app/publishing_ios_app_2[Create Certificate Signing Request]).
 
 image:branded_ios_app/ios-p12.png[image]
 
@@ -10,17 +10,17 @@ Right-click on your private key and left-click *Export [your key name]*.
 
 image:branded_ios_app/ios-p12-2.png[image]
 
-Enter any name you want, the location you want to save it to, and click *Save*.
+Enter any name you want, the location you want to save it to, and click btn:[Save].
 
 image:branded_ios_app/ios-p12-3.png[image]
 
 In the next screen you have the option to enter a password.
 If you put a password on your P12 certificate you will have to include it when you send your certificate and provisioning profiles to support@owncloud.com.
-Click *OK*.
+Click btn:[OK].
 
 image:branded_ios_app/ios-p12-4.png[image]
 
-On the next screen you must enter your login keychain password, which is your Mac login password, and click *Allow*.
+On the next screen you must enter your login keychain password, which is your Mac login password, and click btn:[Allow].
 
 image:branded_ios_app/ios-p12-5.png[image]
 
