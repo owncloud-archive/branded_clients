@@ -1,4 +1,7 @@
 = Building Your App With ownBrander
+:toc: right
+
+== Introduction
 
 Building an Android app requires just a few images, and the wizard tells you their required dimensions.
 They must be the exact specified dimensions, preferably in PNG format.
@@ -48,7 +51,7 @@ You can upload your signing certificate in the wizard so that is signed during t
 See publishing_android_app to learn how to sign your app after it is built.
 
 Google Play Store requires that certificates have a validity period ending after October 22, 2033.
-See link:[<http://developer.android.com/intl/es/tools/publishing/app-signing. html#considerations>].
+See http://developer.android.com/intl/es/tools/publishing/app-signing.html#considerations
 
 *Root folder name* displays the root folder name on your user’s devices.
 

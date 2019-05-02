@@ -1,4 +1,7 @@
 = Distributing Your Branded Android App
+:toc: right
+
+== Introduction
 
 Now that you have created your branded Android app with ownCloud’s ownBuilder service (building_branded_android_client) how do you distribute it to your users? There are multiple ways: email, publish_server, or publish_google_play.
 However you distribute it, the first step is to digitally sign your new app.
@@ -204,7 +207,7 @@ Again, this emits a lot of output, and when you see *Verification succesful* at 
 
 == Distribution via Email
 
-You can download your branded Android app from your account on https://customer.owncloud.com/owncloud[Customer.owncloud.com], and send it as an email attachment to your users. (This is not the optimal way to distribute it as it is over 2 megabytes in size.) When they open your email on their Android phone or tablet, they must first click the the download arrow (bottom right of the screenshot) to download your app.
+You can download your branded Android app from your account on https://customer.owncloud.com/owncloud[customer.owncloud.com], and send it as an email attachment to your users. (This is not the optimal way to distribute it as it is over 2 megabytes in size.) When they open your email on their Android phone or tablet, they must first click the the download arrow (bottom right of the screenshot) to download your app.
 
 image:branded_android_app/android_custom_1.png[image]
 
@@ -221,7 +224,7 @@ When the installation is complete, the https://doc.owncloud.com/android/[ownClou
 == Publish On Your ownCloud Server
 
 You can distribute your branded app from your ownCloud server.
-Simply upload it to your ownCloud server and share it like any other file: you can create normal ownCloud shares with ownCloud users and groups, and you may create a link share to share it with anyone. (See the *Files & Synchronization* section of the https://doc.owncloud.org/server/9.0/user_manual/files/index.html[ownCloud User Manual] to learn more about sharing files.)
+Simply upload it to your ownCloud server and share it like any other file: you can create normal ownCloud shares with ownCloud users and groups, and you may create a link share to share it with anyone. (See the *Files & Synchronization* section of the https://doc.owncloud.org/server/latest/user_manual/files/index.html[ownCloud User Manual] to learn more about sharing files.)
 
 == Publish to the Google Play Store
 
