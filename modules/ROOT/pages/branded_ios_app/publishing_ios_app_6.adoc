@@ -2,7 +2,7 @@
 :experimental:
 
 In addition to emailing your four Ad Hoc provisioning profiles to support@owncloud.com, you must also include your P12 certificate.
-To create this, return to Keychain Access on your Mac computer and find your private key that you created at the beginning (see xref:/branded_ios_app/publishing_ios_app_2[Create Certificate Signing Request]).
+To create this, return to Keychain Access on your Mac computer and find your private key that you created at the beginning (see xref:/branded_ios_app/publishing_ios_app_2.adoc[Create Certificate Signing Request]).
 
 image:branded_ios_app/ios-p12.png[image]
 
