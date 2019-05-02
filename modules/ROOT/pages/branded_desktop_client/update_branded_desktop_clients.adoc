@@ -1,5 +1,7 @@
 = Updating Your Branded Desktop Clients
+:toc: right
 
+== Introduction
 
 The Client Updater Server provides a Web service that will tell an ownCloud desktop sync client whether or not an update is available.
 If an update is available, it will also provide metadata for the update, such as the Download URL, signatures or a fallback URL that the client can resort to in case the update goes wrong.
@@ -18,26 +20,24 @@ See the examples below to learn how to do this.
 == Prerequisites
 
 1.  Configure "Update URL" in the "Desktop" section of your ownBrander account (available for "advanced" users only).
-* Example:::
-  https://mycloud.example.com/updates/ (note the forward slash at the end.)
+* Example: +
+  `\https://mycloud.example.com/updates/` (note the forward slash at the end.)
 2.  Generate branded clients.
 3.  Upload branded clients to your Web server.
-* Windows example:::
-  https://mycloud.example.com/install/mycloud-2.1.1.240-setup.exe
-* Mac OS X examples:::
-  https://mycloud.example.com/install/mycloud-2.1.1.787.pkg
-  +
-  https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz
-  +
-  https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz.sig
+* Windows example: +
+  `\https://mycloud.example.com/install/mycloud-2.1.1.240-setup.exe`
+* Mac OS X examples: +
+  `\https://mycloud.example.com/install/mycloud-2.1.1.787.pkg` +
+  `\https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz` +
+  `\https://mycloud.example.com/install/mycloud-2.1.1.787.pkg.tbz.sig`
 * You should have a Web page with links to your branded clients, so your users can find and download them.
-For example, https://mycloud.example.com/install/ with `Options +Indexes` in your ownCloud `.htaccess` file.
+For example, `\https://mycloud.example.com/install/` with `Options +Indexes` in your ownCloud `.htaccess` file.
 
 == Install client-updater-server
 
 1.  Download `client-updater-server-0.4.tar.xz` from https://customer.owncloud.com/.
 2.  Extract `client-updater-server-0.4.tar.xz` to your Web server.
-The `index.php` must be accessible at `https://mycloud.example.com/updates/index.php`.
+The `index.php` must be accessible at `\https://mycloud.example.com/updates/index.php`.
 3.  Copy your ownCloud `config/ownCloud.yml` file, and name it according your *Application short name* as configured in ownBrander.
 +
 Example: `config/mycloud.yml`
@@ -152,7 +152,8 @@ Name of the new client, same as "Application name" configured in ownBrander.
 
 === Windows
 
-This a example URL of a 2.1.1 client for Mac OS X: https://mycloud.example.com/updates/?version=2.1.1.140&platform=win32&oem= mycloud
+This a example URL of a 2.1.1 client for Mac OS X: +
+`\https://mycloud.example.com/updates/?version=2.1.1.140&platform=win32&oem= mycloud`
 
 You should see something like the following in your Web server logs:
 
@@ -182,11 +183,7 @@ The output should look like this if you call the URL manually:
 
 This a example URL of a 2.1.1 client for Mac OS X:
 
-[source]
-....
-https://mycloud.example.com/updates/?version=2.1.1.687&platform=macos&oem=
-mycloud&sparkle=true
-....
+`\https://mycloud.example.com/updates/?version=2.1.1.687&platform=macos&oem=mycloud&sparkle=true`
 
 You should see something like the following in your Web server logs:
 

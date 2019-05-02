@@ -1,12 +1,15 @@
 = Building Your iOS App With ownBrander
+:toc: right
+:experimental:
 
+== Build Your Branded iOS App
 
 At long last you have arrived at the point where you can actually build your branded iOS app.
-Log into your account on https://customer.owncloud.com/owncloud/[Customer.owncloud.com/owncloud] and open the ownBrander app.
+Log into your account on https://customer.owncloud.com/owncloud/[customer.owncloud.com/owncloud] and open the ownBrander app.
 
 image:branded_ios_app/ownbrander-1.png[image]
 
-If you don’t see the ownBrander app, open a support request (*Open Case* button).
+If you don’t see the ownBrander app, open a support request with the btn:[Open Case] button.
 
 Your first ownBrander task is to review the iOS page on ownBrander for your image requirements.
 You will need a lot of them, in specific sizes and formats, and they’re all listed on the ownBrander page.
@@ -35,7 +38,7 @@ Check *Server URL Visible* to make your ownCloud server URL the default, and to 
 image:branded_ios_app/ownbrander-16.png[image]
 
 And now, the all-important *Bundle ID*.
-Make sure that this is exactly the same as the *Bundle ID* you created on https://developer.apple.com[Developer.apple.com] (see publishing_ios_app_3).
+Make sure that this is exactly the same as the *Bundle ID* you created on https://developer.apple.com[developer.apple.com] (see xref:branded_ios_app/publishing_ios_app_3.adoc[Bundle ID]).
 
 image:branded_ios_app/ownbrander-17.png[image]
 
@@ -139,4 +142,4 @@ image:branded_ios_app/ownbrander-28.png[image]
 
 You may go back and make changes, and when you click the *Generate iOS App* button the build system will use your latest changes.
 
-Check your account on https://customer.owncloud.com/owncloud/[Customer.owncloud.com] in 48 hours to see your new branded ownCloud app.
+Check your account on https://customer.owncloud.com/owncloud/[customer.owncloud.com] in 48 hours to see your new branded ownCloud app.

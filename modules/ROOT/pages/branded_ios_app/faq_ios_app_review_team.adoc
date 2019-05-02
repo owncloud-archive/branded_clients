@@ -1,5 +1,5 @@
 = FAQ iOS App Review Team
-
+:toc: right
 
 Information from Apple: https://developer.apple.com/support/app-review/
 

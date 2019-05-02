@@ -1,18 +1,19 @@
 = Testing Your New Branded iOS App
+:toc: right
+:experimental:
 
+== Distribute the File
 
 You’ll distribute the file with the .ipa extension, like our example MyBiz iOS App-3.4.211.ipa, from your https://customer.owncloud.com/owncloud account to your beta testers.
 To do this you’ll need a Mac computer, an iPhone or iPad registered in your Apple developer account, and the iTunes account associated with your Apple developer account.
 
 1.  Connect your registered iPhone or iPad to a Mac running iTunes.
 2.  Double-click your iOS .ipa file.
-3.  You should see your device in the upper left corner of your iTunes windows.
-Click on it.
-4.  Click the Apps button.
-Now you should see your app in the iTune apps list, with an Install button.
-Click it.
+3.  You should see your device in the upper left corner of your iTunes windows. Click on it.
+4.  Click the btn:[Apps] button.
+Now you should see your app in the iTune apps list, with an Install button. Click it.
 5.  The Install button changes to Will Install.
-6.  Click the sync button in the lower-right corner to sync your device.
+6.  Click the btn:[sync button] in the lower-right corner to sync your device.
 This installs your app on your device.
 
 Your other testers can now install and test your app on their registered iPhones and iPads just like any other app from iTunes.

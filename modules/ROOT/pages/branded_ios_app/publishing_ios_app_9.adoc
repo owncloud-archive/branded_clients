@@ -1,9 +1,12 @@
 = Publishing Your New Branded iOS App
+:toc: right
 :experimental:
 :screenshot-submission-process-url: https://developer.apple.com/news/?id=08082016a
 :screenshot-submission-process-video-url: https://developer.apple.com/videos/play/wwdc2016/305/?time=1700
 :sized-frames-url: https://itunes.apple.com/app/owncloud/id543672169
 :owncloud-customer-url: https://customer.owncloud.com/owncloud
+
+== Publish for General Distribution on iTunes
 
 At last, after following all the previous steps and passing beta testing, your branded iOS app is ready to publish for general distribution on iTunes.
 You need a Mac computer with Xcode installed (Xcode is a free download), and you need the eight provisioning profiles (4 Ad Hoc and 4 Apple Store) and p12 file that you created copied to the same computer that you are using to upload your app to iTunes.
