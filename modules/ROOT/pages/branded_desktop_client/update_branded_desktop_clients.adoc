@@ -151,18 +151,16 @@ Name of the new client, same as "Application name" configured in ownBrander.
 == Debugging client-updater-server
 
 === Windows
-
-This a example URL of a 2.1.1 client for Mac OS X: +
-`\https://mycloud.example.com/updates/?version=2.1.1.140&platform=win32&oem= mycloud`
+This a example URL of a 2.5.0 client for Microsoft Windows: +
+`\https://mycloud.example.com/updates/?version=2.5.0.10598&platform=win32&msi=true&oem=mycloud`
 
 You should see something like the following in your Web server logs:
 
 [source]
 ....
 [19/Feb/2016:14:33:35 +0100] "GET 
-/updates/?version=2.1.1.140&platform=win32&oem=mycloud HTTP/1.1" 200 185 "-" 
-"Mozilla/5.0 (Windows) mirall/2.1.1 (mycloud)" microsecs:530450 
-response_size:185 bytes_received:255 bytes_sent:316
+/updates/?version=2.5.0.10598&platform=win32&msi=true&oem=mycloud HTTP/1.1" 200 185 "-" 
+"Mozilla/5.0 (Windows) mirall/2.5.0 (mycloud)" microsecs:530450 
 ....
 
 The output should look like this if you call the URL manually:
@@ -171,11 +169,11 @@ The output should look like this if you call the URL manually:
 ....
 <?xml version="1.0"?>
    <owncloudclient>
-      <version>2.1.1.140</version>
-       <versionstring>MyCloud Client 2.1.1 (build 140)</versionstring>
+      <version>2.5.0.10598</version>
+       <versionstring>MyCloud Client 2.5.0 (build 10598)</versionstring>
        <web>https://mycloud.example.com/install/</web>   
        <downloadurl>https://mycloud.example.com/install/
-        mycloud-2.1.1.140-setup.exe</downloadurl>
+        mycloud-2.5.0.10598.msi</downloadurl>
    </owncloudclient>
 ....
 
