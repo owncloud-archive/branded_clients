@@ -15,4 +15,5 @@
 ** xref:branded_ios_app/publishing_ios_app_7.adoc[Building Your iOS App With ownBrander]
 ** xref:branded_ios_app/publishing_ios_app_8.adoc[Testing Your New Branded iOS App]
 ** xref:branded_ios_app/publishing_ios_app_9.adoc[Publishing Your New Branded iOS App]
+** xref:branded_ios_app/publishing_ios_app_10.adoc[Additional Server Configuration]
 ** xref:branded_ios_app/faq_ios_app_review_team.adoc[FAQ iOS App Review Team]
