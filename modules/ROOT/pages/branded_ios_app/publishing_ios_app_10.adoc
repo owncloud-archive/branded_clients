@@ -1,4 +1,5 @@
 = Additional Server Configuration 
+:toc: right
 :apple-universal-link-support-url: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
 :admin_manual: https://doc.owncloud.com/server/administration_manual/index.html
 :apple-app-site-association-file-url: https://developer.apple.com/documentation/security/password_autofill/setting_up_an_app_s_associated_domains
@@ -7,6 +8,15 @@
 :generate-ios-app-url: branded_ios_app/publishing_ios_app_7.adoc#generate-ios-app
 
 == Add Support for Apple Universal Links
+
+[NOTE]
+====
+*What is Universal Links?*
+
+When you support universal links, iOS users can tap a link to your website and be seamlessly redirected to your installed app, without going through Safari.
+If your app isn't installed, tapping a link to your website opens your website in Safari.
+For more details, see {apple-universal-link-support-url}[Support Universal Links].
+====
 
 There's some special changes that need to be made. 
 Quoting from Apple's official documentation on {apple-universal-link-support-url}[Universal Link Support]:
