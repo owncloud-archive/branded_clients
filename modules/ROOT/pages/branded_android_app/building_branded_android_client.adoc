@@ -3,28 +3,34 @@
 
 == Introduction
 
-Building an Android app requires just a few images, and the wizard tells you their required dimensions.
-They must be the exact specified dimensions, preferably in PNG format.
+Follow along and begin creating your ownBrander Android app. 
+
+Use your credentials to log-in to https://customer.owncloud.com/owncloud/
+In the event that you need credentials, please do not hesitate to contact your account sales representative.
+
+image:branded_android_app/android_app_build_1.png[image]
+
+After successfully logging into your account, navigate to the left side of your ownCloud instance and click on the inverted arrow to open the menu. Then click the ownBrander icon to open it.
+
+image:branded_android_app/android_app_build_2.png[image]
 
 First, start on the Common tab and enter your application name and the URL to your ownCloud server.
 For testing purposes these can be anything.
-These are your global defaults, and you can change them when you create your apps.
-When you create production apps, then you must use your real app name, and the URL must point to your real ownCloud server.
 
-image:branded_android_app/ownbrander-5.png[image]
+These are your global defaults, and you can change them when you create your apps.
+When you create production apps, you must then use your real app name, and the URL must point to your real ownCloud server.
 
 Next, go to the Android tab.
 This has three sections: *Required*, *Suggested*, and *Advanced*.
 Start in the *Required* section with your application name and server URL, which should be already entered from the Common tab.
 You may change these, and optionally check *Server URL visible* to allow users to change it.
 
-image:branded_android_app/ownbrander-29.png[image]
-
-Now enter your Android package name.
+Now enter your Android Application name in the designated field.
 This is the unique name that identifies it to Google Play.
-Then enter your account type; this identifies it on your users’ Android devices.
+Then enter your account type. This identifies it on your users’ Android devices.
 
-image:branded_android_app/ownbrander-6.png[image]
+image:branded_android_app/android_app_build_3.png[image]
+
 
 Your next three options are *Show multiaccount or disconnect*, *Enable send to other apps features*, and *Enable SAML*.
 When you enable *Show multiaccount or disconnect*, your users can configure multiple ownCloud accounts.
@@ -34,8 +40,9 @@ When it is disabled they see only a disconnect button.
 
 *Enable send to other apps features* allows your users to open ownCloud files with other Android apps, such as file managers and photo galleries.
 
-Next, upload your images.
-The wizard tells you the exact size they must be, and you can click the images on the right to see some example screenshots.
+Building an Android app requires just a few images (preferably PNG format). The wizard also provides you with the exact dimension requirements. Please make certain that your images fulfill the specifications.
+
+Now you can upload your images.
 
 image:branded_android_app/ownbrander-7.png[image]
 
@@ -44,11 +51,133 @@ You need this to enable multiaccounts.
 
 image:branded_android_app/ownbrander-8.png[image]
 
+Upon completion for a first-time ownCloud branding or after performing any modifications (updating your app), click the "Generate Android App" button.
+
+image:branded_android_app/android_app_build_4.png[image]
+
+The following information will pop up - click ok.
+
+image:branded_android_app/android_app_build_5.png[image]
+
+After a designated time frame (normally about 15 minutes), the three files required in order to produce your app will automatically be loaded into your personal folder. 
+In order to get there; just click on either, the ownCloud icon or on the inverted arrow and choose "files" to navigate back to your content page.
+
+image:branded_android_app/android_app_build_6.png[image] 
+
+image:branded_android_app/android_app_build_7.png[image]
+
+Choose  the folder with your name name to find the folders for your various branded clients. 
+
+Choose the Mobile App for Android folder.
+This folder should contain the three files seen in the image below. The .aab file is of relevance for your app in the Google Play Console.
+
+image:branded_android_app/android_app_build_8.png[image]
+
+Now you must sign your app in the Google Play Store in order to distribute it to your users.
+
 == Signing Android Client
 
 The next option is *Sign Android Client*.
-You can upload your signing certificate in the wizard so that is signed during the build process, or you can optionally sign your app after we build it.
-See publishing_android_app to learn how to sign your app after it is built.
+You can upload your signing certificate into the wizard so that will be signed during the build process. Otherwise, you can sign your app after we build it.
+See publishing_android_app to learn how to sign your app after it is built. (Is there a link for this?)
+
+Additional resources to consult due to changes in the Google Play Store as of August 2021 are as follows: 
+
+https://support.google.com/googleplay/android-developer/  (Guide to the Google Play Console)
+
+https://support.google.com/googleplay/android-developer/answer/9842756 
+
+https://developer.android.com/guide/app-bundle
+
+https://github.com/google/bundletool (for those who take deeper dives)
+
+
+Navigate to the Google Play Console Page and click on the Play Console Button.
+
+https://play.google.com/console/about/
+
+You will then land on the developer account sign-on page. https://play.google.com/console/developers.  After successful log-on, choose the appropriate developers account.
+
+insert image with new console view
+
+The page should appear like this. Choose the designated app, which is to be updated.
+
+insert image with app update
+
+Navigate to Production, click and continue by clicking the "create new release" button.
+
+insert images 
+
+Google Play Console will prompt you through this. Follow the steps to validate your app-Integrity.  
+Click the "activate" button.
+(warning) This is necessary in order to use the Android App Bundles (.aab file).
+
+image 
+
+Play App Signing is a safety feature provided by Google. Every new release will automatically be signed by Google. (With this, Apps no longer need to be signed locally.)
+
+Since this is a new release version candidate, and the key comes from the Java KeyStore, choose this option. 
+Otherwise, choose according to your existing key scheme.
+
+image
+
+Follow the instructions pertaining to the chosen key scheme. (Here: JavaKeyStore)
+Download the PEPK-Tool as instructed.
+
+image
+
+Open a terminal window and type the following command with your keystore parameters as saved.
+(Perhaps the KeyStore Alias, Key Store Password and the Key Alias Password) have been entrusted to ownCloud and are available in ownBrander(/ownBrander 2.0). (Reference screenshot 6g).
+
+As seen in the screen after the command, you can click on the copy icon in step 2 to copy the entire block, but you must modify the "foo" parts of the command as follows:
+
+Where: foo.keystore must be replaced by the keystore name (here: damken)
+Alias is the app name (here: damkencloud) aka the Key Alias.
+
+java -jar pepk.jar --keystore=foo.keystore --alias=foo --output=encrypted_private_key_path  (in mark-up?)
+
+image
+
+After executing the above command, you will be prompted to enter both the passwords for "your keystore password" and then for "your key alias password".
+Keep in mind, that these passwords are invisible when typing them. (Multiple entries or typos lead to errors.)
+
+image keystore..
+
+#not certain regarding this on other OS than macOS
+image securita and privacy
+
+Proceed by clicking on the button to upload your private key
+image - upload private key
+
+Double-click the file to upload it. After successful upload, click on the "save" button (bottom right of the page).
+
+You will be redirected to the Terms of Use page. Click accept after reading them.
+
+image encrypted_priv_key
+
+Navigate back to "Production". The certificate is now available for viewing.
+
+image Zertifikat....
+
+In the "Production" bar move to the release review button (not certain how it is actually named in english on the Google Play Console)
+
+image 
+
+Notice the check-mark by the app integrity field.
+
+image - checkmark
+
+Proceed by clicking on "upload" in order to upload your .aab file. (You must download it to your computer system first.)
+
+upload aab image 
+
+You should see Googles colors changing during the upload process. Thereafter, a preview of the app release  candidate.
+
+image WIP
+
+
+
+
 
 Google Play Store requires that certificates have a validity period ending after October 22, 2033.
 See http://developer.android.com/intl/es/tools/publishing/app-signing.html#considerations
