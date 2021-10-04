@@ -5,7 +5,8 @@
 
 Follow along and begin creating your ownBrander Android app. Within the ownBrander App Builder, you will find that most of the fields that require your input are self-explanatory. If you still have questions, or perhaps suggestions, please feel free contact us. 
 
-Use your credentials to log-in to https://customer.owncloud.com/owncloud/
+Use your credentials to log-in to https://customer.owncloud.com/owncloud/[Customer.owncloud.com]
+
 In the event that you need credentials, please do not hesitate to contact your account sales representative.
 
 image:branded_android_app/android_app_build_1.png[image]
@@ -28,14 +29,11 @@ Next, click on the *Android Tab*.
 Here you will find another *Required* area to fill out. 
 You will also see two additional tabs: *Optional*, and *Advanced*. These are not mandatory for the processing of your branding experience.
 
-Start in the *Required* section with your application name and your Android package name.
-
 image:branded_android_app/android_app_build_3.png[image]
 
-image:branded_android_app/test2.png[image]
+Start in the *Required* section and type in your application name, your Android package name and your account typ.
 
-Now enter your Android Application name in the designated field.
-This is the unique name that identifies it on Google Play.
+image:branded_android_app/334.png[image]
 
 Move on to styling your app.
 
@@ -147,7 +145,7 @@ Download the PEPK-Tool as instructed.
 image:branded_android_app/android_app_build_16.png[image]
 
 
-Open a terminal window and type the following command with your keystore parameters (KeyStore Alias, Key Store Password and the Key Alias Password) (Reference screenshot 6g) as saved within the ownBrander.
+Open a terminal window and type the following command with your keystore parameters (KeyStore Alias, Key Store Password and the Key Alias Password) as saved within the ownBrander.
 
 As seen in the screen after the command, you can click on the copy icon in step 2 to copy the entire block, but you must modify the "foo" parts of the command as follows:
 
