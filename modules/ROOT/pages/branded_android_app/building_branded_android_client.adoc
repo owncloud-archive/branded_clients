@@ -33,7 +33,7 @@ image:branded_android_app/android_app_build_3.png[image]
 
 Start in the *Required* section and type in your application name, your Android package name and your account typ.
 
-image:branded_android_app/334.png[image]
+image:branded_android_app/android_app_build_334.png[image]
 
 Move on to styling your app.
 
