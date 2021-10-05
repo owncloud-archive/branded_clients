@@ -4,8 +4,8 @@
 ** xref:branded_desktop_client/update_branded_desktop_clients.adoc[Update Your Branded Desktop Clients]
 * Building Branded Android Apps
 ** xref:branded_android_app/building_branded_android_client.adoc[Building Your App With ownBrander]
-** xref:branded_android_app/signing_android_app.adoc[Signing Your Andoid App]
 ** xref:branded_android_app/publishing_android_app.adoc[Distributing Your Branded Android App]
+** xref:branded_android_app/update_android_app_2021.adoc[Update to Android App Bundle (starting August 2021)]
 * Building  Branded iOS Apps
 ** xref:branded_ios_app/publishing_ios_app.adoc[Building and Distributing Your Branded iOS App]
 ** xref:branded_ios_app/publishing_ios_app_2.adoc[Create Certificate Signing Request]
