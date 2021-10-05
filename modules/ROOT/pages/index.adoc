@@ -2,4 +2,4 @@
 
 * xref:branded_desktop_client/branded_desktop_client.adoc[Building a Branded Desktop Sync Client]
 * xref:branded_android_app/building_branded_android_client.adoc[Building Branded Android Apps]
-* xref:branded_ios_app/publishing_ios_app.adoc[Creating Branded iOS Apps]
+* xref:branded_ios_app/publishing_ios_app.adoc[Building Branded iOS Apps]
