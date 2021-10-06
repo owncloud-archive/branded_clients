@@ -1,13 +1,13 @@
-= Update to Android App Bundle (starting August 2021)
+= Update to Android App Bundle (after August 2021)
 :toc: right
 
 == Introduction
 
-Google Play will started requiring new apps to be published with the Android App Bundle in August 2021 footnote:[https://developer.android.com/guide/app-bundle]. The APK was replaced as the standard publishing format. ownBrander now generates 3 artifacts with every build:
+Since August 2021, Google Play requires the Android App Bundle (.aab) for publishing new apps. footnote:[https://developer.android.com/guide/app-bundle]. With this change, the APK has been replaced as the standard publishing format. The ownBrander now generates 3 artifacts with every build:
 
 * `*-release.aab`: Android App Bundle for Play Store distribution after August 2021
-* `*-release.apk`: Needs signing, use for distribution methods other than Play Store
-* `*-debug.apk`: Install directly on device for debugging purpose
+* `*-release.apk`: Needs signing. Use for distribution methods other than Play Store
+* `*-debug.apk`: Install directly to your device for debugging purposes
 
 For the Android App Bundles, Play App Signing is required footnote:[https://android-developers.googleblog.com/2021/06/the-future-of-android-app-bundles-is.html]. Play App Signing is a safety feature provided by Google. Every new release will automatically be signed by Google. (With this, Apps no longer need to be signed locally.)
 
@@ -45,18 +45,19 @@ Download the PEPK-Tool as instructed.
 
 image:branded_android_app/android_app_build_16.png[image]
 
-Open a terminal window and type the following command with your keystore parameters:
+Gather your keystore parameters:
 
 * KeyStore Alias
 * Key Store Password
 * Key Alias Password
 
-Those are the parameters you used before, to sign the app. Maybe die waren auch im ownBrander drin…
+These are the parameters you previously used to sign your app. Perhaps you kept them stored in the ownBrander.
 
-As seen in the screen after the command, you can click on the copy icon in step 2 to copy the entire block, but you must modify the "foo" parts of the command as follows:
+Input the command below into an open terminal window. As seen in the screen after the command, you can click on the copy to clipboard icon (Step 2) to copy the entire command block, but you must modify the "foo" parts of the command as follows:
 
 * `foo.keystore` must be replaced by the `keystore name` (here: damken)
 * `Alias` is the `app name` (here: damkencloud) aka the `Key Alias`.
+
 
 [source,java]
 ----
@@ -72,7 +73,7 @@ You can also check your signing parameters in ownBrander, if you have uploaded t
 
 image:branded_android_app/android_app_build_18.png[image]
 
-In case you execute the PEPK tool on macOS, you'll need additional permissions in the macOS "Security & Privacy" settings:
+In case you downlaod the PEPK tool on macOS, you'll need additional permissions in the macOS "Security & Privacy" settings:
 
 image:branded_android_app/android_app_build_19.png[image]
 
@@ -80,13 +81,15 @@ Proceed by clicking on the button to upload your private key
 
 image:branded_android_app/android_app_build_20.png[image]
 
-Double-click the file to upload it. After successful upload, click on the "save" button (bottom right of the page).
+Double-click the file to upload it. After a successful upload, click on the "save" button (bottom right of the page).
 
-You will be redirected to the "Terms of Use" page. Click accept after reading them.
+The following is a depiction of the upload file.
 
 image:branded_android_app/android_app_build_21.png[image]
 
-Navigate back to "Production". The certificate is now available for viewing.
+You will be redirected to the "Terms of Use" page. Click "Accept" after reading them.
+
+Navigate back to "Production". The certificate is now displayed.
 
 image:branded_android_app/android_app_build_22.png[image]
 
@@ -94,51 +97,56 @@ In the "Production" bar move to the release review button.
 
 image:branded_android_app/android_app_build_23.png[image]
 
-Notice the check-mark by the app integrity field.
+Notice the check-mark by the "App Integrity" field.
 
 image:branded_android_app/android_app_build_24.png[image]
 
 == Upload Android App Bundle
 
-Proceed by clicking on "upload" in order to upload the `*-release.aab` file you previously downloaded from your shared account on customer.owncloud.com.
+Proceed by clicking on "upload" in order to upload the `*-release.aab` file you previously downloaded from your shared account (personal folder) on customer.owncloud.com.
 
 image:branded_android_app/android_app_build_25.png[image]
 
-You should see Googles colors changing during the upload process. Thereafter, a preview of the app release  candidate.
 image:branded_android_app/android_app_build_26.png[image]
 
-The new version is available and should be proofed before releasing it to the production environment
+You should see Googles colors changing during the upload process. Thereafter, a preview of the app release candidate.
 
 image:branded_android_app/android_app_build_27.png[image]
 
-Optionally, you may want to provide your users with information regarding the changelog, so they know what changes were implemented. 
+The new version is available and should be thoroughly examined before releasing it to the production environment.
 
 image:branded_android_app/android_app_build_28.png[image]
 
-You may copy this from a previous release, if available.
+Optionally, you may choose to provide your users with information regarding the changelog, so they know which changes have been implemented.
 
 image:branded_android_app/android_app_build_29.png[image]
 
-After saving any modifications, proceed by clicking the "check release" button.
-
-You may see some warnings. (If of importance, check to see in what regards they are.) Scroll down. 
+If available from a previous release, just copy it.
 
 image:branded_android_app/android_app_build_30.png[image]
 
-If you opt for a complete roll-out in all of the chosen distribution countries, just click the "Begin Production Release" button.
+After saving any modifications, proceed by clicking the "check release" button.
 
 image:branded_android_app/android_app_build_31.png[image]
 
-Review the chosen distibution and hit the "Release" button. Thereafter, you will receive a release status notification.
+You may see some warnings. (If of importance, check to see in what regards they are.) Scroll down.
 
 image:branded_android_app/android_app_build_32.png[image]
 
+If you opt for a complete roll-out in all of the chosen distribution countries, just click the "Begin Production Release" button.
+
 image:branded_android_app/android_app_build_33.png[image]
 
-Notice, that Play App Signing has been successfully implemented.
+Review the chosen distibution and hit the "Release" button. Thereafter, you will receive a release status notification.
 
 image:branded_android_app/android_app_build_34.png[image]
 
+image:branded_android_app/android_app_build_35.png[image]
+
+Notice, that Play App Signing has been successfully implemented.
+
+image:branded_android_app/android_app_build_37.png[image]
+
 Afterwards, you can find the status of your release/update release candidate in the tab "Release-Overview" or "Release Dashboard?"
 
-image:branded_android_app/android_app_build_35.png[image]
+image:branded_android_app/android_app_build_36.png[image]
