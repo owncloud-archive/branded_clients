@@ -9,7 +9,7 @@ Since August 2021, Google Play requires the Android App Bundle (.aab) for publis
 * `*-release.apk`: Needs signing. Use for distribution methods other than Play Store
 * `*-debug.apk`: Install directly to your device for debugging purposes
 
-For the Android App Bundles, Play App Signing is required footnote:[https://android-developers.googleblog.com/2021/06/the-future-of-android-app-bundles-is.html]. Play App Signing is a safety feature provided by Google. Every new release will automatically be signed by Google. (With this, Apps no longer need to be signed locally.)
+For the Android App Bundles, Play App Signing is required footnote:[https://android-developers.googleblog.com/2021/06/the-future-of-android-app-bundles-is.html]. Play App Signing is a safety feature provided by Google. Every new release will automatically be signed by Google. (With this, apps no longer need to be signed locally.)
 
 Navigate to the Google Play Console Page and click on the Play Console Button.
 
@@ -30,7 +30,7 @@ Navigate to Production, click and continue by clicking the "create new release" 
 image:branded_android_app/android_app_build_12.png[image]
 image:branded_android_app/android_app_build_13.png[image]
 
-Google Play Console will prompt you through this. Follow the steps to validate your app-Integrity.
+Google Play Console will guide you through this. Follow the steps to validate your app-Integrity.
 Click the "activate" button.
 
 image:branded_android_app/android_app_build_14.png[image]
@@ -66,8 +66,8 @@ java -jar pepk.jar --keystore=foo.keystore --alias=foo --output=encrypted_privat
 
 image:branded_android_app/android_app_build_17.png[image]
 
-After executing the above command, you will be prompted to enter both the passwords for "your keystore password" and then for "your key alias password".
-Keep in mind, that these passwords are invisible when typing them. (Multiple entries or typos lead to errors.)
+After executing the above command, you will be prompted to enter both "your keystore password" and then "your key alias password".
+Keep in mind that these passwords remain invisible while you type them. (Multiple entries or typos lead to errors.)
 
 You can also check your signing parameters in ownBrander, if you have uploaded them for previous versions.
 
@@ -77,7 +77,7 @@ In case you downlaod the PEPK tool on macOS, you'll need additional permissions 
 
 image:branded_android_app/android_app_build_19.png[image]
 
-Proceed by clicking on the button to upload your private key
+Proceed by clicking on the button to upload your private key.
 
 image:branded_android_app/android_app_build_20.png[image]
 
@@ -109,7 +109,7 @@ image:branded_android_app/android_app_build_25.png[image]
 
 image:branded_android_app/android_app_build_26.png[image]
 
-You should see Googles colors changing during the upload process. Thereafter, a preview of the app release candidate.
+You should see Google's colors changing during the upload process, then a preview of the app release candidate.
 
 image:branded_android_app/android_app_build_27.png[image]
 
@@ -117,7 +117,7 @@ The new version is available and should be thoroughly examined before releasing 
 
 image:branded_android_app/android_app_build_28.png[image]
 
-Optionally, you may choose to provide your users with information regarding the changelog, so they know which changes have been implemented.
+Optionally, you may choose to provide your users with information regarding the change log so they know which changes have been implemented.
 
 image:branded_android_app/android_app_build_29.png[image]
 
@@ -129,7 +129,7 @@ After saving any modifications, proceed by clicking the "check release" button.
 
 image:branded_android_app/android_app_build_31.png[image]
 
-You may see some warnings. (If of importance, check to see in what regards they are.) Scroll down.
+You may see some warning signs. (If of importance, check to see in what regards they are.) Scroll down.
 
 image:branded_android_app/android_app_build_32.png[image]
 

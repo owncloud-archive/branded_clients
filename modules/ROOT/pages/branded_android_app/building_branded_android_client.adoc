@@ -3,15 +3,15 @@
 
 == Introduction
 
-Follow along and begin creating your ownBrander Android app. Within the ownBrander you will find that most of the fields that require your input are self-explanatory. If you still have questions, or perhaps suggestions, please feel free contact us. 
+Follow along and begin creating your ownBrander Android app. Within the ownBrander you will find that most of the fields that require your input are self-explanatory. If you still have questions, or perhaps suggestions, feel free contact us. 
 
-Use your credentials to log-in to https://customer.owncloud.com/owncloud/[customer.owncloud.com]
+Use your credentials to log in to https://customer.owncloud.com/owncloud/[customer.owncloud.com].
 
-In the event that you need credentials, please do not hesitate to contact your account sales representative.
+If you need credentials, do not hesitate to contact your account sales representative.
 
 image:branded_android_app/android_app_build_1.png[image]
 
-After successfully logging into your account, navigate to the left side of your ownCloud instance and click on the inverted arrow to open the menu. Then click the ownBrander icon to open it.
+After successfully logging in to your account, navigate to the left side of your ownCloud instance and click on the inverted arrow to open the menu. Then click the ownBrander icon to open it.
 
 image:branded_android_app/android_app_build_2.png[image]
 
@@ -47,11 +47,11 @@ Now you can upload your images into the pre-defined boxes.
 
 image:branded_android_app/ownbrander-7.png[image]
 
-Proceed to the section regarding the signing of your Android client and click on the check-box if you want this option. Please, provide the required information for the three fields (Key Store Passord, Key Alias and Key Alias Password.) You will need these credentials in the Google Play Store Console. 
+Proceed to the section regarding the signing of your Android client and click on the checkbox if you want this option. Provide the required information for the three fields (Key Store Password, Key Alias and Key Alias Password.) You will need these credentials in the Google Play Store Console. 
 
-== Generating Your App Build
+== Generating Your App
 
-Upon completion for a first-time ownCloud branding or after performing any modifications (updating your app), click the *Generate Android App* button.
+After a first-time ownCloud branding or after performing any modifications (updating your app), click the *Generate Android App* button.
 
 image:branded_android_app/android_app_build_4.png[image]
 
@@ -59,18 +59,18 @@ The following information will pop up - click ok.
 
 image:branded_android_app/android_app_build_5.png[image]
 
-== Downloading Your Finished App Build
+== Download Your Branded App
 
 After the above mentioned time frame, open your account at: 
 https://customer.owncloud.com/owncloud/[customer.owncloud.com]
 
-The ownBrander produces three files required in order to produce your app. These are automatically uploaded into your personal folder. 
+The ownBrander produces three files required to build your app. These are automatically uploaded into your personal folder. 
 
-Choose the folder with your name name to find the folders for your various branded clients.
+Choose the folder with your name to find the folders for your various branded clients.
 
 image:branded_android_app/android_app_build_7.png[image]
 
-Choose the Mobile App for Android folder.
+Choose the *Mobile App for Android* folder.
 This folder should contain the three files seen in the image below. The .aab file is of relevance for your app in the Google Play Console.
 
 image:branded_android_app/android_app_build_8.png[image]
