@@ -73,7 +73,7 @@ You can also check your signing parameters in ownBrander, if you have uploaded t
 
 image:branded_android_app/android_app_build_18.png[image]
 
-In case you downlaod the PEPK tool on macOS, you'll need additional permissions in the macOS "Security & Privacy" settings:
+In case you download the PEPK tool on macOS, you'll need additional permissions in the macOS "Security & Privacy" settings:
 
 image:branded_android_app/android_app_build_19.png[image]
 
