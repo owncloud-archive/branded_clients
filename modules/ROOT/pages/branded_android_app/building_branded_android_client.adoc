@@ -3,76 +3,80 @@
 
 == Introduction
 
-Building an Android app requires just a few images, and the wizard tells you their required dimensions.
-They must be the exact specified dimensions, preferably in PNG format.
+Follow along and begin creating your ownBrander Android app. Within the ownBrander you will find that most of the fields that require your input are self-explanatory. If you still have questions, or perhaps suggestions, feel free contact us. 
 
-First, start on the Common tab and enter your application name and the URL to your ownCloud server.
-For testing purposes these can be anything.
-These are your global defaults, and you can change them when you create your apps.
-When you create production apps, then you must use your real app name, and the URL must point to your real ownCloud server.
+Use your credentials to log in to https://customer.owncloud.com/owncloud/[customer.owncloud.com].
 
-image:branded_android_app/ownbrander-5.png[image]
+If you need credentials, do not hesitate to contact your account sales representative.
 
-Next, go to the Android tab.
-This has three sections: *Required*, *Suggested*, and *Advanced*.
-Start in the *Required* section with your application name and server URL, which should be already entered from the Common tab.
-You may change these, and optionally check *Server URL visible* to allow users to change it.
+image:branded_android_app/android_app_build_1.png[image]
 
-image:branded_android_app/ownbrander-29.png[image]
+After successfully logging in to your account, navigate to the left side of your ownCloud instance and click on the inverted arrow to open the menu. Then click the ownBrander icon to open it.
 
-Now enter your Android package name.
-This is the unique name that identifies it to Google Play.
-Then enter your account type; this identifies it on your users’ Android devices.
+image:branded_android_app/android_app_build_2.png[image]
 
-image:branded_android_app/ownbrander-6.png[image]
+Begin on the *Common Tab* and navigate to the *Required* area. 
+Next, enter your application name and the URL of your ownCloud server in the corresponding fields.
 
-Your next three options are *Show multiaccount or disconnect*, *Enable send to other apps features*, and *Enable SAML*.
-When you enable *Show multiaccount or disconnect*, your users can configure multiple ownCloud accounts.
-When it is disabled they see only a disconnect button.
+image:branded_android_app/android_app_build_333.png[image]
 
-*Enable SAML* is for ownCloud servers that use SAML (Security Assertion Markup Language) authentication.
+These entries define your global defaults for all of the platforms in ownBrander. You can change them when you create your apps.
 
-*Enable send to other apps features* allows your users to open ownCloud files with other Android apps, such as file managers and photo galleries.
+When you create production apps, you must then use your real app name, and the URL must point to your real ownCloud server.
+(However, for testing purposes, these values can be anything.)
 
-Next, upload your images.
-The wizard tells you the exact size they must be, and you can click the images on the right to see some example screenshots.
+== Configuring ownBrander Parameters
+
+Next, click on the *Android Tab*.
+Here you will find another *Required* area to fill out. 
+You will also see two additional tabs: *Optional*, and *Advanced*. These are not mandatory for the processing of your branding experience.
+
+image:branded_android_app/android_app_build_3.png[image]
+
+Start in the *Required* section and type in your application name, your Android package name and your account typ.
+
+image:branded_android_app/android_app_build_334.png[image]
+
+Move on to styling your app.
+
+*Wizard for your Branding Images*
+
+Building an Android app requires just a few images (preferably PNG format). The wizard also provides you with the exact dimension requirements. Please make certain that your images fulfill the specifications.
+
+Now you can upload your images into the pre-defined boxes.
 
 image:branded_android_app/ownbrander-7.png[image]
 
-You may enter a custom user agent, if you wish, and display a new account link button to your users.
-You need this to enable multiaccounts.
+Proceed to the section regarding the signing of your Android client and click on the checkbox if you want this option. Provide the required information for the three fields (Key Store Password, Key Alias and Key Alias Password.) You will need these credentials in the Google Play Store Console. 
 
-image:branded_android_app/ownbrander-8.png[image]
+== Generating Your App
 
-== Signing Android Client
+After a first-time ownCloud branding or after performing any modifications (updating your app), click the *Generate Android App* button.
 
-The next option is *Sign Android Client*.
-You can upload your signing certificate in the wizard so that is signed during the build process, or you can optionally sign your app after we build it.
-See publishing_android_app to learn how to sign your app after it is built.
+image:branded_android_app/android_app_build_4.png[image]
 
-Google Play Store requires that certificates have a validity period ending after October 22, 2033.
-See http://developer.android.com/intl/es/tools/publishing/app-signing.html#considerations
+The following information will pop up - click ok.
 
-*Root folder name* displays the root folder name on your user’s devices.
+image:branded_android_app/android_app_build_5.png[image]
 
-*Help url* is for entering a link to your help page for the app.
+== Download Your Branded App
 
-*Activate "Recommend" option* displays a "recommend this app" option via email.
+After the above mentioned time frame, open your account at: 
+https://customer.owncloud.com/owncloud/[customer.owncloud.com]
 
-Use *Activate the option feedback* to display an email address for user feedback.
+The ownBrander produces three files required to build your app. These are automatically uploaded into your personal folder. 
 
-*Imprint URL* is for the about page on your Web site, or any page that has information about your company.
+Choose the folder with your name to find the folders for your various branded clients.
 
-Enter any custom download link in *URL to download the app*.
+image:branded_android_app/android_app_build_7.png[image]
 
-Finally, if you are creating a paid app then check the checkbox for *Paid Users* and upload an icon.
+Choose the *Mobile App for Android* folder.
+This folder should contain the three files seen in the image below. The .aab file is of relevance for your app in the Google Play Console.
 
-image:branded_android_app/ownbrander-11.png[image]
+image:branded_android_app/android_app_build_8.png[image]
 
-The *Suggested* and *Advanced* sections allow you to further customize your branding with custom colors and images.
+image:branded_android_app/android_app_build_9.png[image]
 
-When you are finished click the *Generate Android App* button, and you will either see a success message, or an error message telling you what you need to fix.
-Note also that at the bottom of the wizard, the name and version of your new app is displayed, for example *The version that it will be generated is: oc-android-2.0.0_signed*.
-When all of your options are entered correctly and you click the Generate Android App button, it takes up to 48 hours for your app to appear in your https://customer.owncloud.com/owncloud/[Customer.owncloud.com] account.
+Now you must sign your app in the Google Play Store in order to distribute it to your users.
 
-image:branded_android_app/ownbrander-12.png[image]
+
