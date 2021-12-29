@@ -106,7 +106,7 @@ Then enter your company information as you are prompted:
 
 [source]
 ....
-$ keytool -genkey -v -keystore acme-release-key.keystore -alias acme_key
+$ keytool -genkey -v -keystore acme-release-key.keystore -alias acme_key \
 -keyalg RSA -keysize 2048 -validity 10000
 Enter keystore password:
 Re-enter new password:
@@ -140,7 +140,7 @@ Replace `acme-release-key.keystore` and `acme_key` with your own keystore name a
 
 [source]
 ....
-$ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore
+$ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore \
 acme-release-key.keystore acmecloud_1.7.0-release-unsigned.apk acme_key
 Enter Passphrase for keystore:
   adding: META-INF/MANIFEST.MF
